@@ -9,8 +9,23 @@
 <!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
+<!--
+  ⚠️ Remplacer VOTRE-DOMAINE.com par le vrai domaine une fois réservé
+  (canonical, hreflang ci-dessous, et og:url).
+  Note : le site est une seule page avec un toggle EN/FR en JS, pas deux URLs
+  séparées. Les hreflang ci-dessous sont donc auto-référencés (même URL pour
+  fr/en) — ça déclare aux moteurs de recherche que la page existe dans les
+  deux langues, mais le vrai gain SEO viendrait d'URLs dédiées (/en/) si un
+  jour le site grossit et vise activement le marché anglophone.
+-->
+<link rel="canonical" href="https://VOTRE-DOMAINE.com/" />
+<link rel="alternate" hreflang="fr" href="https://VOTRE-DOMAINE.com/" />
+<link rel="alternate" hreflang="en" href="https://VOTRE-DOMAINE.com/" />
+<link rel="alternate" hreflang="x-default" href="https://VOTRE-DOMAINE.com/" />
+
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
+<meta property="og:url" content="https://VOTRE-DOMAINE.com/" />
 <meta id="t-og-title" property="og:title" content="Messi Amour — Développeur full-stack & entrepreneur tech" />
 <meta id="t-og-desc" property="og:description" content="Assistant IA (MESSIA) et SaaS scolaire (SmartSchool Africa) conçus, codés et déployés en solo. Disponible pour stage, freelance ou collaboration produit." />
 <meta property="og:image" content="og-image.png" />
@@ -254,8 +269,38 @@
     <div class="contact-box">
       <h2 id="t-contact-h2">Construisons quelque chose ensemble.</h2>
       <p id="t-contact-p">Je suis disponible immédiatement pour un stage, une mission freelance ou une collaboration produit. Si mon profil correspond à ce que vous cherchez, ne perdons pas de temps — écrivez-moi.</p>
+
+      <!--
+        ⚠️ Remplacer YOUR_FORM_ID par ton propre ID Formspree :
+        1. Crée un compte gratuit sur https://formspree.io
+        2. Crée un formulaire, copie son endpoint (https://formspree.io/f/xxxxxxx)
+        3. Colle-le dans l'attribut action ci-dessous
+        Tant que ce n'est pas fait, le formulaire échouera et affichera le
+        message d'erreur (qui redirige vers l'email) — rien n'est perdu.
+      -->
+      <form id="contactForm" class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+        <div class="form-row">
+          <label for="cf-name" id="t-form-label-name">Nom</label>
+          <input type="text" id="cf-name" name="name" autocomplete="name" required />
+        </div>
+        <div class="form-row">
+          <label for="cf-email" id="t-form-label-email">Email</label>
+          <input type="email" id="cf-email" name="email" autocomplete="email" required />
+        </div>
+        <div class="form-row">
+          <label for="cf-message" id="t-form-label-message">Message</label>
+          <textarea id="cf-message" name="message" rows="5" required></textarea>
+        </div>
+        <!-- honeypot field — invisible to humans, catches basic spam bots -->
+        <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <button type="submit" class="btn btn-primary" id="t-form-submit">Envoyer →</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="contact-divider"><span id="t-form-or">ou écris-moi directement</span></div>
+
       <div class="hero-cta" style="justify-content:center;">
-        <a class="btn btn-primary" href="mailto:messiamour034@gmail.com">messiamour034@gmail.com</a>
+        <a class="btn btn-ghost" href="mailto:messiamour034@gmail.com">messiamour034@gmail.com</a>
         <a class="btn btn-whatsapp" href="https://wa.me/242065487336" target="_blank" rel="noopener">WhatsApp</a>
         <a class="btn btn-ghost" href="cv-messi-amour.pdf" target="_blank" id="t-cta-cv-2">Télécharger le CV ↓</a>
         <a class="btn btn-ghost" href="https://github.com/messi-amour" target="_blank">GitHub ↗</a>

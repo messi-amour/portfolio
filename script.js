@@ -98,6 +98,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       't-contact-h2': "Let's build something together.",
       't-contact-p': "I'm available immediately for an internship, a freelance mission, or a product collaboration. If my profile matches what you're looking for, let's not waste time — write to me.",
+      't-form-label-name': 'Name',
+      't-form-label-email': 'Email',
+      't-form-label-message': 'Message',
+      't-form-submit': 'Send →',
+      't-form-or': 'or write to me directly',
 
       't-footer': '© 2026 Messi Amour · Republic of Congo'
     }
@@ -117,7 +122,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const langToggle = document.getElementById('langToggle');
   const htmlEl = document.documentElement;
-  let currentLang = localStorage.getItem('site-lang') || 'fr';
+
+  // The CV download links point to a different file per language.
+  const cvHref = { fr: 'cv-messi-amour.pdf', en: 'cv-messi-amour-en.pdf' };
+  const cvLinkIds = ['t-cta-cv-1', 't-cta-cv-2'];
+
+  // Priority for the initial language: explicit ?lang= URL param (e.g. for
+  // sharing a direct English link) > a language the visitor already chose
+  // manually before (saved in localStorage) > browser/OS language > French
+  // (the site's authored default language).
+  function detectInitialLang() {
+    const urlLang = new URLSearchParams(window.location.search).get('lang');
+    if (urlLang === 'en' || urlLang === 'fr') return urlLang;
+
+    const saved = localStorage.getItem('site-lang');
+    if (saved === 'en' || saved === 'fr') return saved;
+
+    const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    if (browserLang && !browserLang.startsWith('fr')) return 'en';
+
+    return 'fr';
+  }
+
+  let currentLang = 'fr';
 
   function applyLang(lang) {
     Object.keys(translations.en).forEach(id => {
@@ -132,6 +159,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     htmlEl.setAttribute('lang', lang);
     if (langToggle) langToggle.textContent = lang === 'en' ? 'FR' : 'EN';
+    cvLinkIds.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.setAttribute('href', cvHref[lang]);
+    });
     localStorage.setItem('site-lang', lang);
     currentLang = lang;
   }
@@ -142,6 +173,60 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Apply saved preference on load (defaults to French, the site's authored language)
-  if (currentLang === 'en') applyLang('en');
+  // Apply the detected language on load (French markup is already in place,
+  // so applyLang('fr') is a harmless no-op that also syncs the button/localStorage).
+  applyLang(detectInitialLang());
+
+  // ── Contact form (Formspree) ────────────────────────────
+  const contactForm = document.getElementById('contactForm');
+  const formStatus = document.getElementById('formStatus');
+
+  if (contactForm && formStatus) {
+    const statusText = {
+      fr: {
+        sending: 'Envoi en cours…',
+        success: 'Message envoyé — je réponds sous 24h.',
+        error: "Erreur d'envoi. Écris-moi directement à messiamour034@gmail.com.",
+        notConfigured: "Le formulaire n'est pas encore branché — écris-moi directement à messiamour034@gmail.com."
+      },
+      en: {
+        sending: 'Sending…',
+        success: "Message sent — I'll reply within 24h.",
+        error: 'Something went wrong. Email me directly at messiamour034@gmail.com.',
+        notConfigured: "The form isn't wired up yet — email me directly at messiamour034@gmail.com."
+      }
+    };
+
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const t = statusText[currentLang] || statusText.fr;
+
+      if (contactForm.action.includes('YOUR_FORM_ID')) {
+        formStatus.textContent = t.notConfigured;
+        formStatus.className = 'form-status error';
+        return;
+      }
+
+      formStatus.textContent = t.sending;
+      formStatus.className = 'form-status sending';
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { Accept: 'application/json' }
+        });
+        if (response.ok) {
+          formStatus.textContent = t.success;
+          formStatus.className = 'form-status success';
+          contactForm.reset();
+        } else {
+          throw new Error('Form submission failed');
+        }
+      } catch (err) {
+        formStatus.textContent = t.error;
+        formStatus.className = 'form-status error';
+      }
+    });
+  }
 });
