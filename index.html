@@ -3,23 +3,23 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Messi amour — Développeur & Entrepreneur Tech</title>
-<meta name="description" content="Développeur full-stack autodidacte et entrepreneur tech basé à Brazzaville. Conçoit, code et déploie seul des produits complets : MESSIA (assistant IA) et SmartSchool Africa (SaaS scolaire). Disponible pour stage, freelance ou collaboration produit." />
+<title id="t-title">Messi amour — Développeur & Entrepreneur Tech</title>
+<meta id="t-meta-desc" name="description" content="Développeur full-stack autodidacte et entrepreneur tech basé à Brazzaville. Conçoit, code et déploie seul des produits complets : MESSIA (assistant IA) et SmartSchool Africa (SaaS scolaire). Disponible pour stage, freelance ou collaboration produit." />
 
 <!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Messi Amour — Développeur full-stack & entrepreneur tech" />
-<meta property="og:description" content="Assistant IA (MESSIA) et SaaS scolaire (SmartSchool Africa) conçus, codés et déployés en solo. Disponible pour stage, freelance ou collaboration produit." />
+<meta id="t-og-title" property="og:title" content="Messi Amour — Développeur full-stack & entrepreneur tech" />
+<meta id="t-og-desc" property="og:description" content="Assistant IA (MESSIA) et SaaS scolaire (SmartSchool Africa) conçus, codés et déployés en solo. Disponible pour stage, freelance ou collaboration produit." />
 <meta property="og:image" content="og-image.png" />
-<meta property="og:locale" content="fr_FR" />
+<meta id="t-og-locale" property="og:locale" content="fr_FR" />
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Messi Amour — Développeur full-stack & entrepreneur tech" />
-<meta name="twitter:description" content="Assistant IA (MESSIA) et SaaS scolaire (SmartSchool Africa) conçus, codés et déployés en solo." />
+<meta id="t-tw-title" name="twitter:title" content="Messi Amour — Développeur full-stack & entrepreneur tech" />
+<meta id="t-tw-desc" name="twitter:description" content="Assistant IA (MESSIA) et SaaS scolaire (SmartSchool Africa) conçus, codés et déployés en solo." />
 <meta name="twitter:image" content="og-image.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,32 +33,33 @@
   <div class="wrap">
     <div class="nav-logo">messi<span>amour</span></div>
     <div class="nav-links">
-      <a href="#about">À propos</a>
-      <a href="#process">Méthode</a>
-      <a href="#formation">Formation</a>
-      <a href="#log">Projets</a>
-      <a href="#skills">Compétences</a>
-      <a href="#opportunities">Opportunités</a>
-      <a href="#contact">Contact</a>
+      <a href="#about" id="t-nav-about">À propos</a>
+      <a href="#process" id="t-nav-process">Méthode</a>
+      <a href="#formation" id="t-nav-formation">Formation</a>
+      <a href="#log" id="t-nav-log">Projets</a>
+      <a href="#skills" id="t-nav-skills">Compétences</a>
+      <a href="#opportunities" id="t-nav-opportunities">Opportunités</a>
+      <a href="#contact" id="t-nav-contact">Contact</a>
     </div>
+    <button id="langToggle" class="lang-toggle" type="button" aria-label="Switch language">EN</button>
   </div>
 </nav>
 
 <header class="hero">
   <div class="wrap">
-    <div class="eyebrow">Brazzaville, Congo — disponible immédiatement</div>
-    <div class="status-badge"><span class="status-dot"></span>Actuellement en train de coder SmartSchool Africa</div>
-    <h1>Je construis des produits logiciels,<br>du premier commit <em>aux premiers utilisateurs.</em></h1>
-    <p class="lead">Développeur full-stack autodidacte et entrepreneur tech. Seul, j'ai conçu, codé et déployé deux produits complets — un assistant IA et une plateforme SaaS — du premier cahier des charges jusqu'aux premiers vrais utilisateurs. Aujourd'hui, je cherche une équipe ou un projet où mettre cette énergie au travail dès demain.</p>
+    <div class="eyebrow" id="t-eyebrow">Brazzaville, Congo — disponible immédiatement</div>
+    <div class="status-badge"><span class="status-dot"></span><span id="t-badge">Actuellement en train de coder SmartSchool Africa</span></div>
+    <h1 id="t-h1">Je construis des produits logiciels,<br>du premier commit <em>aux premiers utilisateurs.</em></h1>
+    <p class="lead" id="t-lead">Développeur full-stack autodidacte et entrepreneur tech. Seul, j'ai conçu, codé et déployé deux produits complets — un assistant IA et une plateforme SaaS — du premier cahier des charges jusqu'aux premiers vrais utilisateurs. Aujourd'hui, je cherche une équipe ou un projet où mettre cette énergie au travail dès demain.</p>
     <div class="hero-meta">
-      <span class="pill">Stage développeur full-stack</span>
-      <span class="pill">Mission freelance</span>
-      <span class="pill">Collaboration produit / startup</span>
+      <span class="pill" id="t-pill1">Stage développeur full-stack</span>
+      <span class="pill" id="t-pill2">Mission freelance</span>
+      <span class="pill" id="t-pill3">Collaboration produit / startup</span>
     </div>
     <div class="hero-cta">
-      <a class="btn btn-primary" href="mailto:messiamour034@gmail.com">Travaillons ensemble →</a>
+      <a class="btn btn-primary" href="mailto:messiamour034@gmail.com" id="t-cta-work">Travaillons ensemble →</a>
       <a class="btn btn-whatsapp" href="https://wa.me/242065487336" target="_blank" rel="noopener">WhatsApp</a>
-      <a class="btn btn-ghost" href="cv-messi-amour.pdf" target="_blank">Télécharger le CV ↓</a>
+      <a class="btn btn-ghost" href="cv-messi-amour.pdf" target="_blank" id="t-cta-cv-1">Télécharger le CV ↓</a>
       <a class="btn btn-ghost" href="https://github.com/messi-amour" target="_blank">GitHub</a>
     </div>
   </div>
@@ -68,16 +69,16 @@
 
 <section id="about">
   <div class="wrap">
-    <div class="section-head"><span class="section-num">01</span><span class="section-title">À <em>propos</em></span></div>
+    <div class="section-head"><span class="section-num">01</span><span class="section-title" id="t-about-title">À <em>propos</em></span></div>
     <div class="about-grid">
       <div class="about-text">
-        <p>Je m'appelle <strong>Messi amour</strong>. Je ne me contente pas d'apprendre à coder — je livre. Mes projets ne sont pas des exercices académiques : ce sont des applications réelles, pensées pour de vrais utilisateurs, avec les arbitrages techniques et produit que cela impose.</p>
-        <p>Ce qui me distingue, c'est l'<strong>autonomie totale</strong> sur la chaîne complète : je conçois l'architecture, j'écris le code, je déploie, je teste avec de vrais utilisateurs, et j'itère sur les retours. C'est exactement ce que je veux apporter à une équipe — pas seulement exécuter une tâche, mais comprendre le produit et le faire avancer.</p>
-        <p>Mon moteur, c'est une conviction simple : <strong>l'innovation est une nécessité pour l'Afrique</strong>, pas un luxe importé. Je construis avec cette idée en tête, et je cherche aujourd'hui un environnement qui me permettra de la mettre au service d'un projet plus grand que moi.</p>
+        <p id="t-about-p1">Je m'appelle <strong>Messi amour</strong>. Je ne me contente pas d'apprendre à coder — je livre. Mes projets ne sont pas des exercices académiques : ce sont des applications réelles, pensées pour de vrais utilisateurs, avec les arbitrages techniques et produit que cela impose.</p>
+        <p id="t-about-p2">Ce qui me distingue, c'est l'<strong>autonomie totale</strong> sur la chaîne complète : je conçois l'architecture, j'écris le code, je déploie, je teste avec de vrais utilisateurs, et j'itère sur les retours. C'est exactement ce que je veux apporter à une équipe — pas seulement exécuter une tâche, mais comprendre le produit et le faire avancer.</p>
+        <p id="t-about-p3">Mon moteur, c'est une conviction simple : <strong>l'innovation est une nécessité pour l'Afrique</strong>, pas un luxe importé. Je construis avec cette idée en tête, et je cherche aujourd'hui un environnement qui me permettra de la mettre au service d'un projet plus grand que moi.</p>
       </div>
       <div class="stat-grid">
-        <div class="stat"><div class="stat-val">2</div><div class="stat-lbl">Produits en développement actif</div></div>
-        <div class="stat"><div class="stat-val">Full-stack</div><div class="stat-lbl">Du backend à l'interface utilisateur</div></div>
+        <div class="stat"><div class="stat-val">2</div><div class="stat-lbl" id="t-stat1-lbl">Produits en développement actif</div></div>
+        <div class="stat"><div class="stat-val">Full-stack</div><div class="stat-lbl" id="t-stat2-lbl">Du backend à l'interface utilisateur</div></div>
       </div>
     </div>
   </div>
@@ -87,27 +88,27 @@
 
 <section id="process">
   <div class="wrap">
-    <div class="section-head"><span class="section-num">02</span><span class="section-title">Comment je <em>travaille</em></span></div>
+    <div class="section-head"><span class="section-num">02</span><span class="section-title" id="t-process-title">Comment je <em>travaille</em></span></div>
     <div class="process-grid">
       <div class="process-step">
         <span class="process-num">01</span>
-        <h3>Cadrage</h3>
-        <p>Je clarifie le vrai problème avant d'écrire une ligne de code : utilisateurs cibles, contraintes réelles, définition d'une v1 utile.</p>
+        <h3 id="t-process1-h">Cadrage</h3>
+        <p id="t-process1-p">Je clarifie le vrai problème avant d'écrire une ligne de code : utilisateurs cibles, contraintes réelles, définition d'une v1 utile.</p>
       </div>
       <div class="process-step">
         <span class="process-num">02</span>
-        <h3>Architecture</h3>
-        <p>Je choisis la stack et la structure des données en fonction du produit, pas par habitude — en pensant déploiement et coûts dès le départ.</p>
+        <h3 id="t-process2-h">Architecture</h3>
+        <p id="t-process2-p">Je choisis la stack et la structure des données en fonction du produit, pas par habitude — en pensant déploiement et coûts dès le départ.</p>
       </div>
       <div class="process-step">
         <span class="process-num">03</span>
-        <h3>Build</h3>
-        <p>Je code, je déploie tôt et souvent, et je garde une version fonctionnelle en ligne plutôt qu'un projet qui n'existe que sur ma machine.</p>
+        <h3 id="t-process3-h">Build</h3>
+        <p id="t-process3-p">Je code, je déploie tôt et souvent, et je garde une version fonctionnelle en ligne plutôt qu'un projet qui n'existe que sur ma machine.</p>
       </div>
       <div class="process-step">
         <span class="process-num">04</span>
-        <h3>Itération</h3>
-        <p>Je mets le produit devant de vrais utilisateurs, je récolte les retours, et j'ajuste — le produit continue d'évoluer après le premier lancement.</p>
+        <h3 id="t-process4-h">Itération</h3>
+        <p id="t-process4-p">Je mets le produit devant de vrais utilisateurs, je récolte les retours, et j'ajuste — le produit continue d'évoluer après le premier lancement.</p>
       </div>
     </div>
   </div>
@@ -117,34 +118,34 @@
 
 <section id="formation">
   <div class="wrap">
-    <div class="section-head"><span class="section-num">03</span><span class="section-title">Formation</span></div>
+    <div class="section-head"><span class="section-num">03</span><span class="section-title" id="t-formation-title">Formation</span></div>
     <div class="log">
 
       <div class="log-entry">
         <div class="log-dot"></div>
-        <div class="log-meta"><span>2026</span><span>·</span><span>en cours</span></div>
+        <div class="log-meta"><span>2026</span><span>·</span><span id="t-f1-status">en cours</span></div>
         <div class="log-card">
-          <span class="role">Licence Informatique</span>
+          <span class="role" id="t-f1-role">Licence Informatique</span>
           <h3>L1 Informatique — IGT</h3>
-          <p>Première année du cursus, en parallèle du développement de MESSIA et SmartSchool Africa. Poursuite d'études envisagée en L2 Informatique à la rentrée 2027.</p>
+          <p id="t-f1-p">Première année du cursus, en parallèle du développement de MESSIA et SmartSchool Africa. Poursuite d'études envisagée en L2 Informatique à la rentrée 2027.</p>
         </div>
       </div>
 
       <div class="log-entry">
         <div class="log-dot"></div>
-        <div class="log-meta"><span>2025</span><span>·</span><span>6 mois</span></div>
+        <div class="log-meta"><span>2025</span><span>·</span><span id="t-f2-status">6 mois</span></div>
         <div class="log-card">
-          <span class="role">Formation intensive</span>
-          <h3>Programmation — ACSI</h3>
-          <p>Formation intensive de six mois en programmation, base des compétences techniques développées ensuite en autodidacte sur des projets réels.</p>
+          <span class="role" id="t-f2-role">Formation intensive</span>
+          <h3 id="t-f2-h">Programmation — ACSI</h3>
+          <p id="t-f2-p">Formation intensive de six mois en programmation, base des compétences techniques développées ensuite en autodidacte sur des projets réels.</p>
         </div>
       </div>
 
       <div class="log-entry">
         <div class="log-dot"></div>
-        <div class="log-meta"><span>2024</span><span>·</span><span>obtenu</span></div>
+        <div class="log-meta"><span>2024</span><span>·</span><span id="t-f3-status">obtenu</span></div>
         <div class="log-card">
-          <span class="role">Baccalauréat</span>
+          <span class="role" id="t-f3-role">Baccalauréat</span>
           <h3>BAC — 2024</h3>
         </div>
       </div>
@@ -157,33 +158,33 @@
 
 <section id="log">
   <div class="wrap">
-    <div class="section-head"><span class="section-num">04</span><span class="section-title">Journal de <em>build</em></span></div>
+    <div class="section-head"><span class="section-num">04</span><span class="section-title" id="t-log-title">Journal de <em>build</em></span></div>
 
     <div class="log">
 
       <div class="log-entry">
         <div class="log-dot"></div>
-        <div class="log-meta"><span class="log-hash">#messia</span><span>·</span><span>2026</span><span>·</span><span>en bêta-test</span></div>
+        <div class="log-meta"><span class="log-hash">#messia</span><span>·</span><span>2026</span><span>·</span><span id="t-log1-status">en bêta-test</span></div>
         <div class="log-card">
-          <span class="role">Assistant IA conversationnel</span>
+          <span class="role" id="t-log1-role">Assistant IA conversationnel</span>
           <h3>MESSIA</h3>
-          <p>Assistant conversationnel complet construit en solo : streaming temps réel, 4 personnalités, raccourcis slash, recherche web, commande vocale, mémoire utilisateur. Architecture serverless de bout en bout, de l'authentification au déploiement continu.</p>
+          <p id="t-log1-p">Assistant conversationnel complet construit en solo : streaming temps réel, 4 personnalités, raccourcis slash, recherche web, commande vocale, mémoire utilisateur. Architecture serverless de bout en bout, de l'authentification au déploiement continu.</p>
           <div class="tag-row">
             <span class="tag">Node.js</span><span class="tag">Groq · Llama 3.3 70B</span><span class="tag">Supabase</span><span class="tag">Tavily</span><span class="tag">Render</span>
           </div>
           <div class="log-links">
-            <a href="https://messia-v1-0.onrender.com" target="_blank">Voir le produit ↗</a>
+            <a href="https://messia-v1-0.onrender.com" target="_blank" id="t-log1-link">Voir le produit ↗</a>
           </div>
         </div>
       </div>
 
       <div class="log-entry">
         <div class="log-dot"></div>
-        <div class="log-meta"><span class="log-hash">#smartschool</span><span>·</span><span>2026</span><span>·</span><span>en développement</span></div>
+        <div class="log-meta"><span class="log-hash">#smartschool</span><span>·</span><span>2026</span><span>·</span><span id="t-log2-status">en développement</span></div>
         <div class="log-card">
-          <span class="role">SaaS multi-tenant</span>
+          <span class="role" id="t-log2-role">SaaS multi-tenant</span>
           <h3>SmartSchool Africa</h3>
-          <p>Plateforme de gestion scolaire pour établissements d'Afrique centrale : isolation des données par école, bulletins PDF générés automatiquement, gestion complète des notes et inscriptions. Backend validé sur six modules ; frontend React en cours de développement.</p>
+          <p id="t-log2-p">Plateforme de gestion scolaire pour établissements d'Afrique centrale : isolation des données par école, bulletins PDF générés automatiquement, gestion complète des notes et inscriptions. Backend validé sur six modules ; frontend React en cours de développement.</p>
           <div class="tag-row">
             <span class="tag">Django 5 · DRF</span><span class="tag">PostgreSQL</span><span class="tag">React · TypeScript</span><span class="tag">Tailwind CSS</span><span class="tag">WeasyPrint</span>
           </div>
@@ -198,27 +199,27 @@
 
 <section id="skills">
   <div class="wrap">
-    <div class="section-head"><span class="section-num">05</span><span class="section-title">Compétences <em>techniques</em></span></div>
+    <div class="section-head"><span class="section-num">05</span><span class="section-title" id="t-skills-title">Compétences <em>techniques</em></span></div>
     <div class="skill-cols">
       <div class="skill-col">
-        <h4>Langages</h4>
+        <h4 id="t-skills-h1">Langages</h4>
         <ul><li>Python</li><li>JavaScript</li><li>SQL</li><li>HTML / CSS</li><li>C++</li></ul>
       </div>
       <div class="skill-col">
-        <h4>Frameworks & Outils</h4>
+        <h4 id="t-skills-h2">Frameworks & Outils</h4>
         <ul><li>Django / DRF</li><li>React</li><li>Node.js</li><li>Tailwind CSS</li></ul>
       </div>
       <div class="skill-col">
-        <h4>Infrastructure</h4>
-        <ul><li>Supabase</li><li>PostgreSQL</li><li>Render</li><li>Git / GitHub</li><li>Intégration API & IA</li></ul>
+        <h4 id="t-skills-h3">Infrastructure</h4>
+        <ul><li>Supabase</li><li>PostgreSQL</li><li>Render</li><li>Git / GitHub</li><li id="t-skills-h3-li5">Intégration API & IA</li></ul>
       </div>
     </div>
     <div style="margin-top:34px;">
-      <h4 style="font-size:12.5px; color:var(--terracotta); font-weight:600; text-transform:uppercase; letter-spacing:1px; margin-bottom:15px;">Langues</h4>
+      <h4 id="t-skills-lang-h4" style="font-size:12.5px; color:var(--terracotta); font-weight:600; text-transform:uppercase; letter-spacing:1px; margin-bottom:15px;">Langues</h4>
       <div class="tag-row">
-        <span class="tag">Français — courant</span>
-        <span class="tag">Lingala — natif</span>
-        <span class="tag">Anglais — technique / lecture</span>
+        <span class="tag" id="t-skills-lang1">Français — courant</span>
+        <span class="tag" id="t-skills-lang2">Lingala — natif</span>
+        <span class="tag" id="t-skills-lang3">Anglais — technique / lecture</span>
       </div>
     </div>
   </div>
@@ -228,19 +229,19 @@
 
 <section id="opportunities">
   <div class="wrap">
-    <div class="section-head"><span class="section-num">06</span><span class="section-title">Ce que je <em>recherche</em></span></div>
+    <div class="section-head"><span class="section-num">06</span><span class="section-title" id="t-opp-title">Ce que je <em>recherche</em></span></div>
     <div class="opp-grid">
       <div class="opp-card">
-        <h3>Stage développeur full-stack</h3>
-        <p>Une équipe technique où apprendre vite, contribuer à un vrai produit, et repartir avec plus de rigueur d'ingénierie que je n'en ai aujourd'hui.</p>
+        <h3 id="t-opp1-h">Stage développeur full-stack</h3>
+        <p id="t-opp1-p">Une équipe technique où apprendre vite, contribuer à un vrai produit, et repartir avec plus de rigueur d'ingénierie que je n'en ai aujourd'hui.</p>
       </div>
       <div class="opp-card">
-        <h3>Mission freelance</h3>
-        <p>Un projet web, IA ou produit métier à concevoir et livrer de bout en bout — comme je l'ai déjà fait pour MESSIA et SmartSchool Africa.</p>
+        <h3 id="t-opp2-h">Mission freelance</h3>
+        <p id="t-opp2-p">Un projet web, IA ou produit métier à concevoir et livrer de bout en bout — comme je l'ai déjà fait pour MESSIA et SmartSchool Africa.</p>
       </div>
       <div class="opp-card">
-        <h3>Collaboration produit / startup</h3>
-        <p>Une équipe ou un fondateur qui cherche un développeur capable de penser produit, pas seulement d'exécuter des tickets.</p>
+        <h3 id="t-opp3-h">Collaboration produit / startup</h3>
+        <p id="t-opp3-p">Une équipe ou un fondateur qui cherche un développeur capable de penser produit, pas seulement d'exécuter des tickets.</p>
       </div>
     </div>
   </div>
@@ -251,19 +252,19 @@
 <section id="contact">
   <div class="wrap">
     <div class="contact-box">
-      <h2>Construisons quelque chose ensemble.</h2>
-      <p>Je suis disponible immédiatement pour un stage, une mission freelance ou une collaboration produit. Si mon profil correspond à ce que vous cherchez, ne perdons pas de temps — écrivez-moi.</p>
+      <h2 id="t-contact-h2">Construisons quelque chose ensemble.</h2>
+      <p id="t-contact-p">Je suis disponible immédiatement pour un stage, une mission freelance ou une collaboration produit. Si mon profil correspond à ce que vous cherchez, ne perdons pas de temps — écrivez-moi.</p>
       <div class="hero-cta" style="justify-content:center;">
         <a class="btn btn-primary" href="mailto:messiamour034@gmail.com">messiamour034@gmail.com</a>
         <a class="btn btn-whatsapp" href="https://wa.me/242065487336" target="_blank" rel="noopener">WhatsApp</a>
-        <a class="btn btn-ghost" href="cv-messi-amour.pdf" target="_blank">Télécharger le CV ↓</a>
+        <a class="btn btn-ghost" href="cv-messi-amour.pdf" target="_blank" id="t-cta-cv-2">Télécharger le CV ↓</a>
         <a class="btn btn-ghost" href="https://github.com/messi-amour" target="_blank">GitHub ↗</a>
       </div>
     </div>
   </div>
 </section>
 
-<footer>© 2026 Messi amour · Brazzaville, République du Congo</footer>
+<footer id="t-footer">© 2026 Messi amour · Brazzaville, République du Congo</footer>
 
 <script src="script.js"></script>
 </body>
