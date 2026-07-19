@@ -11,6 +11,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ── Scroll reveal ────────────────────────────────────────
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const revealEls = document.querySelectorAll('.reveal');
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    revealEls.forEach(el => el.classList.add('in'));
+  } else {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    revealEls.forEach(el => io.observe(el));
+  }
+
   // ── EN / FR language toggle ─────────────────────────────
   const translations = {
     en: {
@@ -32,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       't-eyebrow': 'Brazzaville, Congo — available immediately',
       't-badge': 'Currently building SmartSchool Africa',
-      't-h1': 'I build software products,<br>from first commit <em>to first users.</em>',
+      't-h1': 'I build made-to-measure products,<br>from first thread <em>to first user.</em>',
       't-lead': "Self-taught full-stack developer and tech entrepreneur. On my own, I've designed, coded and deployed two complete products — an AI assistant and a SaaS platform — from the first spec to the first real users. Today, I'm looking for a team or a project where I can put that energy to work starting tomorrow.",
       't-pill1': 'Full-stack developer internship',
       't-pill2': 'Freelance mission',
@@ -41,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
       't-cta-cv-1': 'Download CV ↓',
       't-cta-cv-2': 'Download CV ↓',
 
+      't-about-eyebrow': 'Profile',
       't-about-title': 'About <em>me</em>',
       't-about-p1': "My name is <strong>Messi Amour</strong>. I don't just learn to code — I ship. My projects aren't academic exercises: they're real applications, built for real users, with the technical and product trade-offs that requires.",
       't-about-p2': "What sets me apart is <strong>full ownership</strong> of the entire chain: I design the architecture, write the code, deploy it, test it with real users, and iterate on feedback. That's exactly what I want to bring to a team — not just execute a task, but understand the product and push it forward.",
@@ -48,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
       't-stat1-lbl': 'Products in active development',
       't-stat2-lbl': 'From backend to user interface',
 
+      't-process-eyebrow': 'Method',
       't-process-title': 'How I <em>work</em>',
       't-process1-h': 'Scoping',
       't-process1-p': "I clarify the real problem before writing a single line of code: target users, real constraints, and defining a useful v1.",
@@ -58,6 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
       't-process4-h': 'Iteration',
       't-process4-p': 'I put the product in front of real users, gather feedback, and adjust — the product keeps evolving after the first launch.',
 
+      't-formation-eyebrow': 'Background',
       't-formation-title': 'Education',
       't-f1-status': 'ongoing',
       't-f1-role': 'Computer Science Degree',
@@ -69,15 +89,19 @@ document.addEventListener('DOMContentLoaded', () => {
       't-f3-status': 'obtained',
       't-f3-role': 'High School Diploma',
 
+      't-log-eyebrow': 'Projects',
       't-log-title': 'Build <em>log</em>',
       't-log1-status': 'in beta testing',
       't-log1-role': 'Conversational AI assistant',
-      't-log1-p': 'Full conversational assistant built solo: real-time streaming, 4 personas, slash shortcuts, web search, voice command, user memory. End-to-end serverless architecture, from authentication to continuous deployment.',
+      't-log1-p': 'Full conversational assistant built solo: five personas with adaptive temperature, function-calling web search, real-time streaming, conversation memory, voice command. End-to-end serverless architecture.',
+      't-log1-p2': 'Three-tier freemium monetization system (guest, free account, Premium at 2000 FCFA/month) with Supabase-backed quota tracking and a WhatsApp-linked upgrade flow.',
       't-log1-link': 'View product ↗',
       't-log2-status': 'in development',
       't-log2-role': 'Multi-tenant SaaS',
-      't-log2-p': 'School management platform for institutions across Central Africa: per-school data isolation, automatically generated PDF report cards, full grade and enrollment management. Backend validated across six modules; React frontend in progress.',
+      't-log2-p': 'School management platform for institutions across Central Africa: per-school data isolation, role-based JWT authentication, automatically generated PDF report cards. Backend validated across six Django/DRF modules.',
+      't-log2-p2': 'React 19 frontend being connected to the real backend: school management and account creation already wired up, six user roles, full demo mode for the remaining modules.',
 
+      't-skills-eyebrow': 'Skills',
       't-skills-title': 'Technical <em>skills</em>',
       't-skills-h1': 'Languages',
       't-skills-h2': 'Frameworks & Tools',
@@ -88,6 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
       't-skills-lang2': 'Lingala — native',
       't-skills-lang3': 'English — technical / reading',
 
+      't-opp-eyebrow': 'Opportunities',
       't-opp-title': 'What I\'m <em>looking for</em>',
       't-opp1-h': 'Full-stack developer internship',
       't-opp1-p': "A technical team where I can learn fast, contribute to a real product, and come away with more engineering rigor than I have today.",
