@@ -1,7 +1,4 @@
-# ⚠️ Remplacer VOTRE-DOMAINE.com par le vrai domaine une fois réservé
-# (ici, dans sitemap.xml, et dans les balises canonical/hreflang/og:url de index.html)
-
 User-agent: *
 Allow: /
 
-Sitemap: https://VOTRE-DOMAINE.com/sitemap.xml
+Sitemap: https://messi-amour.github.io/portfolio/sitemap.xml

@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
       't-badge': 'Currently building SmartSchool Africa',
       't-h1': 'I build made-to-measure products,<br>from first thread <em>to first user.</em>',
       't-lead': "Self-taught full-stack developer and tech entrepreneur. On my own, I've designed, coded and deployed two complete products — an AI assistant and a SaaS platform — from the first spec to the first real users. Today, I'm looking for a team or a project where I can put that energy to work starting tomorrow.",
+      't-pill0': 'Work-study (Alternance)',
       't-pill1': 'Full-stack developer internship',
       't-pill2': 'Freelance mission',
       't-pill3': 'Product / startup collaboration',
@@ -115,6 +116,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       't-opp-eyebrow': 'Opportunities',
       't-opp-title': 'What I\'m <em>looking for</em>',
+      't-opp0-h': 'Work-study (Alternance)',
+      't-opp0-p': "A work-study contract to combine ongoing training with work on a real product, alongside a team willing to invest over time.",
       't-opp1-h': 'Full-stack developer internship',
       't-opp1-p': "A technical team where I can learn fast, contribute to a real product, and come away with more engineering rigor than I have today.",
       't-opp2-h': 'Freelance mission',
