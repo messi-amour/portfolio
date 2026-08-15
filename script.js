@@ -97,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
       't-log1-role': 'Conversational AI assistant',
       't-log1-p': 'Full conversational assistant built solo: five personas with adaptive temperature, function-calling web search, real-time streaming, conversation memory, voice command. End-to-end serverless architecture.',
       't-log1-p2': 'Three-tier freemium monetization system (guest, free account, Premium at 2000 FCFA/month) with Supabase-backed quota tracking and a WhatsApp-linked upgrade flow.',
+      't-log1-p3': 'Live since late June 2026, beta-tested by around ten users since early July. Groq (LPU) inference: up to ~300 tokens/second, first token in under 200ms.',
       't-log1-link': 'View product ↗',
       't-log2-status': 'in development',
       't-log2-role': 'Multi-tenant SaaS',
