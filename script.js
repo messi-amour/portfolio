@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const htmlEl = document.documentElement;
 
   // The CV download links point to a different file per language.
-  const cvHref = { fr: 'cv-messi-amour.pdf', en: 'cv-messi-amour-en.pdf' };
+  const cvHref = { fr: 'cv-messi-amour-fr.pdf', en: 'cv-messi-amour-en.pdf' };
   const cvLinkIds = ['t-cta-cv-1', 't-cta-cv-2'];
 
   // Priority for the initial language: explicit ?lang= URL param (e.g. for
