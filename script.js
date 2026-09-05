@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
       't-nav-log': 'Projects',
       't-nav-skills': 'Skills',
       't-nav-opportunities': 'Opportunities',
-      't-nav-services': 'SME Services',
       't-nav-contact': 'Contact',
 
       't-eyebrow': 'Brazzaville, Congo — available immediately',
@@ -125,16 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
       't-opp3-h': 'Product / startup collaboration',
       't-opp3-p': "A team or founder looking for a developer who can think product, not just execute tickets.",
 
-      't-services-tag': 'For local businesses — Pointe-Noire',
-      't-services-title': 'Automate your customer service on <em>WhatsApp</em>',
-      't-services-intro': "Alongside my SaaS products, I help shops and SMEs in Pointe-Noire automate their customer relationship on WhatsApp — fast setup, near-zero starting cost.",
-      't-svc1-h': 'WhatsApp Business chatbot',
-      't-svc1-p': "Automatic replies, catalog and order-taking directly inside WhatsApp, so you never miss a customer — even outside business hours.",
-      't-svc2-h': 'Reminders & confirmations',
-      't-svc2-p': 'Order confirmations, appointment reminders and follow-ups sent automatically through the official WhatsApp Business API.',
-      't-svc3-h': 'Fast setup',
-      't-svc3-p': 'Live in a matter of days, priced for local business budgets, with support in French through to launch.',
-      't-services-cta': "Discuss your needs →",
 
       't-contact-h2': "Let's build something together.",
       't-contact-p': "I'm available immediately for an internship, a freelance mission, or a product collaboration. If my profile matches what you're looking for, let's not waste time — write to me.",
