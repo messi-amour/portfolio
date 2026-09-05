@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title id="t-title">Messi Amour — Développeur & Entrepreneur Tech</title>
-<meta id="t-meta-desc" name="description" content="Développeur full-stack autodidacte et entrepreneur tech basé à Brazzaville. Conçoit, code et déploie seul des produits complets : MESSIA (assistant IA) et SmartSchool Africa (SaaS scolaire). Disponible pour stage, freelance ou collaboration produit." />
+<meta id="t-meta-desc" name="description" content="Développeur full-stack autodidacte à Brazzaville. Créateur de MESSIA (IA) et SmartSchool Africa (SaaS scolaire). Disponible pour stage ou freelance." />
 
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
@@ -36,10 +36,30 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Messi Amour",
+  "jobTitle": "Développeur Full-Stack & Entrepreneur Tech",
+  "url": "https://messi-amour.github.io/portfolio/",
+  "image": "https://messi-amour.github.io/portfolio/og-image.png",
+  "email": "mailto:messiamour034@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Brazzaville",
+    "addressCountry": "CG"
+  },
+  "sameAs": [
+    "https://github.com/messi-amour",
+    "https://www.linkedin.com/in/messi-amour-440a4b431"
+  ],
+  "knowsAbout": ["JavaScript", "Python", "React", "Node.js", "Django", "Supabase", "IA conversationnelle"]
+}
+</script>
 </head>
 <body>
 
-<!-- Reusable fold SVG, referenced via <use> for every fold instance -->
 <nav>
   <div class="wrap">
     <div class="nav-logo">
@@ -96,7 +116,7 @@
         <p id="t-about-p3">Mon moteur, c'est une conviction simple : <strong>l'innovation est une nécessité pour l'Afrique</strong>, pas un luxe importé. Je construis avec cette idée en tête, et je cherche aujourd'hui un environnement qui me permettra de la mettre au service d'un projet plus grand que moi.</p>
       </div>
       <div class="stat-grid">
-        <div class="stat"><div class="stat-val">2</div><div class="stat-lbl" id="t-stat1-lbl">Produits en développement actif</div></div>
+        <div class="stat"><div class="stat-val">1+1</div><div class="stat-lbl" id="t-stat1-lbl">Un produit terminé, un en cours</div></div>
         <div class="stat"><div class="stat-val">Full-stack</div><div class="stat-lbl" id="t-stat2-lbl">Du backend à l'interface utilisateur</div></div>
       </div>
     </div>
@@ -192,12 +212,12 @@
 
       <div class="log-entry">
         <div class="log-dot"></div>
-        <div class="log-meta"><span class="log-hash">#messia</span><span>·</span><span>2026</span><span>·</span><span id="t-log1-status">en bêta-test</span></div>
+        <div class="log-meta"><span class="log-hash">#messia</span><span>·</span><span>2026</span><span>·</span><span id="t-log1-status">terminé</span></div>
         <div class="log-card">
           <span class="role" id="t-log1-role">Assistant IA conversationnel</span>
           <h3>MESSIA</h3>
           <p id="t-log1-p">Assistant conversationnel complet construit en solo : cinq personas à température adaptative, recherche web par function-calling, streaming temps réel, mémoire de conversation, commande vocale. Architecture serverless de bout en bout.</p>
-          <p id="t-log1-p2">Système de monétisation freemium à plusieurs paliers (invité, compte gratuit, puis Étude à 1500 FCFA/mois, Carrière à 2000 FCFA/mois et Premium à 3500 FCFA/mois) avec suivi de quota côté Supabase et parcours d'upgrade lié à WhatsApp.</p>
+          <p id="t-log1-p2">Système de monétisation freemium à plusieurs paliers (invité, compte gratuit, offres payantes) avec suivi de quota côté Supabase et parcours d'upgrade lié à WhatsApp.</p>
           <p id="t-log1-p3">En ligne depuis fin juin 2026, testé en beta par une dizaine d'utilisateurs depuis début juillet. Inférence Groq (LPU) : jusqu'à ~300 tokens/seconde, premier token en moins de 200 ms.</p>
           <div class="quota-strip" aria-hidden="true">
             <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span>
@@ -214,12 +234,12 @@
 
       <div class="log-entry">
         <div class="log-dot"></div>
-        <div class="log-meta"><span class="log-hash">#smartschool</span><span>·</span><span>2026</span><span>·</span><span id="t-log2-status">en développement</span></div>
+        <div class="log-meta"><span class="log-hash">#smartschool</span><span>·</span><span>2026</span><span>·</span><span id="t-log2-status">en développement — non public</span></div>
         <div class="log-card">
           <span class="role" id="t-log2-role">SaaS multi-tenant</span>
           <h3>SmartSchool Africa</h3>
           <p id="t-log2-p">Plateforme de gestion scolaire pour établissements d'Afrique centrale : isolation des données par école, authentification JWT par rôle, bulletins PDF générés automatiquement. Backend validé sur six modules Django/DRF.</p>
-          <p id="t-log2-p2">Frontend React 19 en cours de connexion au backend réel : gestion des établissements et création de comptes déjà branchées, six rôles utilisateurs, mode démo complet pour les modules restants.</p>
+          <p id="t-log2-p2">Frontend React 19 en cours de connexion au backend réel : gestion des établissements et création de comptes déjà branchées, six rôles utilisateurs, mode démo complet pour les modules restants. Projet encore non public, accès sur demande.</p>
           <div class="tag-row">
             <span class="tag">Django 5 · DRF</span><span class="tag">PostgreSQL</span><span class="tag">React · TypeScript</span><span class="tag">Tailwind CSS</span><span class="tag">WeasyPrint</span>
           </div>

@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const translations = {
     en: {
       't-title': 'Messi Amour — Full-Stack Developer & Tech Entrepreneur',
-      't-meta-desc': 'Self-taught full-stack developer and tech entrepreneur based in Brazzaville. Designs, codes and deploys complete products solo: MESSIA (AI assistant) and SmartSchool Africa (school SaaS). Available for internship, freelance or product collaboration.',
+      't-meta-desc': 'Self-taught full-stack developer in Brazzaville. Creator of MESSIA (AI) and SmartSchool Africa (school SaaS). Available for internship or freelance.',
       't-og-title': 'Messi Amour — Full-Stack Developer & Tech Entrepreneur',
       't-og-desc': 'AI assistant (MESSIA) and school SaaS (SmartSchool Africa) designed, coded and deployed solo. Available for internship, freelance or product collaboration.',
       't-og-locale': 'en_US',
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
       't-about-p1': "My name is <strong>Messi Amour</strong>. I don't just learn to code — I ship. My projects aren't academic exercises: they're real applications, built for real users, with the technical and product trade-offs that requires.",
       't-about-p2': "What sets me apart is <strong>full ownership</strong> of the entire chain: I design the architecture, write the code, deploy it, test it with real users, and iterate on feedback. That's exactly what I want to bring to a team — not just execute a task, but understand the product and push it forward.",
       't-about-p3': "My drive comes from a simple conviction: <strong>innovation is a necessity for Africa</strong>, not an imported luxury. I build with that idea in mind, and I'm now looking for an environment where I can put it to work on something bigger than myself.",
-      't-stat1-lbl': 'Products in active development',
+      't-stat1-lbl': 'One shipped, one in progress',
       't-stat2-lbl': 'From backend to user interface',
 
       't-process-eyebrow': 'Method',
@@ -93,16 +93,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
       't-log-eyebrow': 'Projects',
       't-log-title': 'Build <em>log</em>',
-      't-log1-status': 'in beta testing',
+      't-log1-status': 'completed',
       't-log1-role': 'Conversational AI assistant',
       't-log1-p': 'Full conversational assistant built solo: five personas with adaptive temperature, function-calling web search, real-time streaming, conversation memory, voice command. End-to-end serverless architecture.',
-      't-log1-p2': 'Multi-tier freemium monetization system (guest, free account, then Étude at 1500 FCFA/month, Carrière at 2000 FCFA/month and Premium at 3500 FCFA/month) with Supabase-backed quota tracking and a WhatsApp-linked upgrade flow.',
+      't-log1-p2': 'Multi-tier freemium monetization system (guest, free account, paid plans) with Supabase-backed quota tracking and a WhatsApp-linked upgrade flow.',
       't-log1-p3': 'Live since late June 2026, beta-tested by around ten users since early July. Groq (LPU) inference: up to ~300 tokens/second, first token in under 200ms.',
       't-log1-link': 'View product ↗',
-      't-log2-status': 'in development',
+      't-log2-status': 'in development — not public',
       't-log2-role': 'Multi-tenant SaaS',
       't-log2-p': 'School management platform for institutions across Central Africa: per-school data isolation, role-based JWT authentication, automatically generated PDF report cards. Backend validated across six Django/DRF modules.',
-      't-log2-p2': 'React 19 frontend being connected to the real backend: school management and account creation already wired up, six user roles, full demo mode for the remaining modules.',
+      't-log2-p2': 'React 19 frontend being connected to the real backend: school management and account creation already wired up, six user roles, full demo mode for the remaining modules. Not public yet, available on request.',
 
       't-skills-eyebrow': 'Skills',
       't-skills-title': 'Technical <em>skills</em>',
