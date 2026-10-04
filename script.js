@@ -35,6 +35,21 @@ document.addEventListener('DOMContentLoaded', () => {
     window.matchMedia('(min-width: 761px)').addEventListener('change', () => setNav(false));
   }
 
+  document.documentElement.classList.add('js');
+  const motionOK = !window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window;
+
+  // Staggered entrance for grid items and timeline entries
+  const staggerGroups = [
+    ['.process-grid > .process-step', 90], ['.opp-grid > .opp-card', 90], ['.skill-cols > .skill-col', 100],
+    ['.stat-grid > .stat', 100], ['.num-grid > .num', 80], ['.log-entry', 0]
+  ];
+  const stgEls = [];
+  staggerGroups.forEach(([sel, step]) => document.querySelectorAll(sel).forEach((el, i) => {
+    el.classList.add('stg');
+    el.style.setProperty('--d', (i * step) + 'ms');
+    stgEls.push(el);
+  }));
+
   // ── Scroll reveal ────────────────────────────────────────
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const revealEls = document.querySelectorAll('.reveal');
@@ -50,6 +65,80 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
     revealEls.forEach(el => io.observe(el));
+  }
+
+  // ── Motion: counters, timeline, progress bar, scrollspy, spotlight ──
+  const once = (cb, opts) => new IntersectionObserver((entries, obs) => entries.forEach(e => {
+    if (e.isIntersecting) { cb(e.target); obs.unobserve(e.target); }
+  }), opts);
+
+  if (motionOK) {
+    const so = once(el => el.classList.add('in'), { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    stgEls.forEach(el => so.observe(el));
+  } else {
+    stgEls.forEach(el => el.classList.add('in'));
+  }
+
+  // Count-up numbers
+  const fmtCount = (el, v) => { el.textContent = (el.dataset.prefix || '') + Math.round(v) + (el.dataset.suffix || ''); };
+  document.querySelectorAll('[data-count]').forEach(el => {
+    const target = Number(el.dataset.count);
+    if (!motionOK) { fmtCount(el, target); return; }
+    fmtCount(el, 0);
+    once(() => {
+      const t0 = performance.now(), dur = 1700;
+      const tick = (now) => {
+        const p = Math.min((now - t0) / dur, 1);
+        fmtCount(el, target * (1 - Math.pow(1 - p, 3)));
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    }, { threshold: 0.6 }).observe(el);
+  });
+
+  // Quota bar fills one segment at a time; timeline line draws itself
+  document.querySelectorAll('.quota-strip').forEach(strip => {
+    strip.querySelectorAll('span').forEach((sp, i) => sp.style.setProperty('--i', i));
+    if (motionOK) once(el => el.classList.add('in'), { threshold: 0.6 }).observe(strip); else strip.classList.add('in');
+  });
+  document.querySelectorAll('.log').forEach(log => {
+    if (motionOK) once(el => el.classList.add('drawn'), { threshold: 0.05 }).observe(log); else log.classList.add('drawn');
+  });
+
+  // Scroll progress bar
+  const bar = document.createElement('div');
+  bar.id = 'scrollProgress';
+  bar.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(bar);
+  const onScroll = () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.transform = 'scaleX(' + (max > 0 ? window.scrollY / max : 0) + ')';
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Highlight the current section in the menu
+  const spyLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+  const spyMap = new Map(spyLinks.map(a => [a.getAttribute('href').slice(1), a]));
+  if ('IntersectionObserver' in window) {
+    const spy = new IntersectionObserver(entries => entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      spyLinks.forEach(l => l.classList.remove('active'));
+      const l = spyMap.get(e.target.id);
+      if (l) l.classList.add('active');
+    }), { rootMargin: '-45% 0px -50% 0px' });
+    spyMap.forEach((_, id) => { const sec = document.getElementById(id); if (sec) spy.observe(sec); });
+  }
+
+  // Cursor spotlight on cards (desktop only)
+  if (!window.matchMedia('(pointer: coarse)').matches) {
+    document.querySelectorAll('.stat, .log-card, .opp-card, .process-step').forEach(card => {
+      card.addEventListener('pointermove', e => {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      });
+    });
   }
 
   // ── EN / FR language toggle ─────────────────────────────
@@ -126,12 +215,18 @@ document.addEventListener('DOMContentLoaded', () => {
       "t-svc3-h": "AI assistant / chatbot",
       "t-svc3-p": "A French-language conversational assistant for your business: adapted personas, web search, quotas and paid plans as needed.",
       "t-svc3-f": "Ideal for: customer service, digital products, teams.",
-      "t-p1-s1": "Home",
-      "t-p1-s2": "Conversation",
-      "t-p1-s3": "Brand visual (illustration)",
+      "t-p1-s1": "Home \u2014 Android",
+      "t-p1-s2": "Home \u2014 iPhone",
+      "t-p1-s3": "Chat \u2014 iPhone",
       "t-svc1-price": "From 100,000 FCFA",
       "t-svc2-price": "On quote",
       "t-svc3-price": "On quote",
+      "t-num1-l": "Adaptive conversational personas",
+      "t-num2-l": "Access tiers: guest, free, premium",
+      "t-num3-l": "Validated backend modules (SmartSchool)",
+      "t-num4-l": "MESSIA beta testers",
+      "t-num5-l": "Inference speed (Groq LPU)",
+      "t-num6-l": "Time to first token",
       "t-skills-eyebrow": "Skills",
       "t-skills-title": "Technical <em>skills</em>",
       "t-skills-h1": "Languages",
