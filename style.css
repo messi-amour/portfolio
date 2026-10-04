@@ -305,3 +305,41 @@ footer{ padding:44px 0; text-align:center; font-size:12px; color:var(--faint); f
 .log-entry.soon .log-dot{ border-style:dashed; }
 .log-entry.soon .log-card{ border-style:dashed; }
 .log-links{ flex-wrap:wrap; }
+
+/* ── SERVICES ─────────────────────────────── */
+.svc-for{ font-family:var(--mono); font-size:12px !important; color:var(--faint) !important; margin-top:14px; }
+.svc-note{ color:var(--dim); font-size:14.5px; margin:28px 0 16px; }
+.svc-cta{ display:inline-flex; }
+
+/* ── MOBILE MENU ──────────────────────────── */
+html{ scroll-padding-top:74px; }
+.nav-burger{ display:none; }
+@media (max-width:760px){
+  .nav-burger{
+    display:inline-flex; flex-direction:column; align-items:center; justify-content:center; gap:4px;
+    width:40px; height:34px; margin-left:8px; padding:0; cursor:pointer;
+    background:transparent; border:1px solid var(--line-strong); border-radius:20px;
+  }
+  .nav-burger span{ display:block; width:16px; height:1.5px; background:var(--dim); transition:transform .2s ease, opacity .2s ease; }
+  nav.open .nav-burger span:nth-child(1){ transform:translateY(5.5px) rotate(45deg); }
+  nav.open .nav-burger span:nth-child(2){ opacity:0; }
+  nav.open .nav-burger span:nth-child(3){ transform:translateY(-5.5px) rotate(-45deg); }
+  .nav-links{
+    display:none; position:absolute; top:66px; left:0; right:0; flex-direction:column; gap:0;
+    padding:6px 24px 14px; background:var(--ink); border-bottom:1px solid var(--line);
+  }
+  nav.open .nav-links{ display:flex; }
+  .nav-links a{ padding:14px 0; font-size:15px; border-bottom:1px solid var(--line); }
+  .nav-links a:last-child{ border-bottom:none; }
+  .nav-links a::after{ display:none; }
+}
+
+/* ── PROJECT SCREENSHOTS ──────────────────── */
+.shots{ display:flex; gap:14px; overflow-x:auto; padding:4px 2px 12px; margin-bottom:12px; -webkit-overflow-scrolling:touch; }
+.shots figure{ flex:0 0 auto; margin:0; }
+.shots a{ display:block; }
+.shots img{ display:block; height:340px; width:auto; border-radius:14px; border:1px solid var(--line-strong); }
+.shots figcaption{ font-family:var(--mono); font-size:11.5px; color:var(--faint); margin-top:8px; }
+
+/* ── PRICE LINE ───────────────────────────── */
+.svc-price{ font-family:var(--serif); font-size:19px !important; font-weight:600; color:var(--cream) !important; margin:14px 0 0 !important; }

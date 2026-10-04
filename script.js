@@ -11,6 +11,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // External links and PDFs always open in a new tab, safely
+  document.querySelectorAll('a[href]').forEach(link => {
+    const href = link.getAttribute('href');
+    if (/^https?:\/\//i.test(href) || /\.pdf($|\?)/i.test(href)) {
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+    }
+  });
+
+  // Mobile hamburger menu
+  const navEl = document.querySelector('nav');
+  const navToggle = document.getElementById('navToggle');
+  if (navEl && navToggle) {
+    const setNav = (open) => {
+      navEl.classList.toggle('open', open);
+      navToggle.setAttribute('aria-expanded', String(open));
+    };
+    navToggle.addEventListener('click', () => setNav(!navEl.classList.contains('open')));
+    navEl.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => setNav(false)));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setNav(false); });
+    document.addEventListener('click', (e) => { if (!navEl.contains(e.target)) setNav(false); });
+    window.matchMedia('(min-width: 761px)').addEventListener('change', () => setNav(false));
+  }
+
   // ── Scroll reveal ────────────────────────────────────────
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const revealEls = document.querySelectorAll('.reveal');
@@ -88,6 +112,26 @@ document.addEventListener('DOMContentLoaded', () => {
       "t-f2-p": "Six-month intensive programming training, the foundation of the technical skills later developed self-taught on real projects.",
       "t-f3-status": "obtained",
       "t-f3-role": "High School Diploma",
+      "t-nav-services": "Services",
+      "t-svc-eyebrow": "Services",
+      "t-svc-title": "What I <em>offer</em>",
+      "t-svc-note": "Indicative pricing depending on pages and options; a precise quote after a conversation about your needs.",
+      "t-svc-cta": "Request a quote →",
+      "t-svc1-h": "Showcase site / online shop",
+      "t-svc1-p": "A fast, mobile-first website that presents your business and sends customers to WhatsApp to order or book.",
+      "t-svc1-f": "Ideal for: shops, restaurants, independents.",
+      "t-svc2-h": "Custom web application",
+      "t-svc2-p": "A business tool with user accounts, roles and a database: management, tracking, invoicing, dashboards.",
+      "t-svc2-f": "Ideal for: SMEs, schools, associations, startups.",
+      "t-svc3-h": "AI assistant / chatbot",
+      "t-svc3-p": "A French-language conversational assistant for your business: adapted personas, web search, quotas and paid plans as needed.",
+      "t-svc3-f": "Ideal for: customer service, digital products, teams.",
+      "t-p1-s1": "Home",
+      "t-p1-s2": "Conversation",
+      "t-p1-s3": "Brand visual (illustration)",
+      "t-svc1-price": "From 100,000 FCFA",
+      "t-svc2-price": "On quote",
+      "t-svc3-price": "On quote",
       "t-skills-eyebrow": "Skills",
       "t-skills-title": "Technical <em>skills</em>",
       "t-skills-h1": "Languages",

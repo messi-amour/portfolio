@@ -67,17 +67,19 @@
     <div class="nav-logo">
       messi<span>amour</span>
     </div>
-    <div class="nav-links">
+    <div class="nav-links" id="navLinks">
       <a href="#about" id="t-nav-about">À propos</a>
       <a href="#process" id="t-nav-process">Méthode</a>
       <a href="#formation" id="t-nav-formation">Formation</a>
       <a href="#log" id="t-nav-log">Projets</a>
+      <a href="#services" id="t-nav-services">Services</a>
       <a href="#skills" id="t-nav-skills">Compétences</a>
       <a href="#opportunities" id="t-nav-opportunities">Opportunités</a>
       <a href="#contact" id="t-nav-contact">Contact</a>
     </div>
     <button id="langToggle" class="lang-toggle" type="button" aria-label="Switch language">EN</button>
     <button id="themeToggle" class="lang-toggle theme-toggle" type="button" aria-label="Mode clair">◐</button>
+    <button id="navToggle" class="nav-burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
@@ -94,11 +96,11 @@
       <span class="pill" id="t-pill3">Alternance</span>
     </div>
     <div class="hero-cta">
-      <a class="btn btn-primary" href="https://wa.me/242065487336?text=Bonjour%20Messi%2C%20j%27ai%20vu%20ton%20portfolio%20et%20j%27aimerais%20discuter%20d%27un%20projet." target="_blank" rel="noopener" id="t-cta-work">Travaillons ensemble →</a>
-      <a class="btn btn-whatsapp" href="https://wa.me/242065487336" target="_blank" rel="noopener">WhatsApp</a>
-      <a class="btn btn-ghost" href="cv-messi-amour-fr.pdf" target="_blank" id="t-cta-cv-1">Télécharger le CV ↓</a>
-      <a class="btn btn-ghost" href="https://github.com/messi-amour" target="_blank">GitHub</a>
-      <a class="btn btn-ghost" href="https://www.linkedin.com/in/messi-amour-440a4b431" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn btn-primary" href="https://wa.me/242065487336?text=Bonjour%20Messi%2C%20j%27ai%20vu%20ton%20portfolio%20et%20j%27aimerais%20discuter%20d%27un%20projet." id="t-cta-work" target="_blank" rel="noopener noreferrer">Travaillons ensemble →</a>
+      <a class="btn btn-whatsapp" href="https://wa.me/242065487336" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      <a class="btn btn-ghost" href="cv-messi-amour-fr.pdf" id="t-cta-cv-1" target="_blank" rel="noopener noreferrer">Télécharger le CV ↓</a>
+      <a class="btn btn-ghost" href="https://github.com/messi-amour" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/messi-amour-440a4b431" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </div>
   </div>
 </header>
@@ -228,9 +230,10 @@
           <span class="role" id="t-p1-role">Assistant IA conversationnel</span>
           <h3>MESSIA</h3>
           <div class="case"><p><b id="t-p1-k1">Problème</b><span id="t-p1-v1">Proposer un assistant IA en français, rapide, utilisable dès le premier message et capable de se financer.</span></p><p><b id="t-p1-k2">Solution</b><span id="t-p1-v2">Cinq personas à température adaptative, recherche web par function calling, streaming temps réel, mémoire de conversation et commande vocale, sur une architecture serverless. Freemium à trois paliers (invité, compte gratuit, offres payantes) avec quotas suivis dans Supabase et passage à l'offre premium via WhatsApp.</span></p><p><b id="t-p1-k3">Résultat</b><span id="t-p1-v3">En ligne depuis fin juin 2026, testé en bêta par une dizaine d'utilisateurs. Inférence Groq (LPU) : jusqu'à ~300 tokens/s, premier token en moins de 200 ms.</span></p></div>
+          <div class="shots"><figure><a href="images/messia-accueil.jpg" target="_blank" rel="noopener noreferrer"><img src="images/messia-accueil.jpg" alt="Écran d'accueil de MESSIA avec suggestions et raccourcis" loading="lazy" width="405" height="760"></a><figcaption id="t-p1-s1">Accueil</figcaption></figure><figure><a href="images/messia-conversation.jpg" target="_blank" rel="noopener noreferrer"><img src="images/messia-conversation.jpg" alt="Conversation avec MESSIA : réponse structurée à une question" loading="lazy" width="538" height="760"></a><figcaption id="t-p1-s2">Conversation</figcaption></figure><figure><a href="images/messia-identite.jpg" target="_blank" rel="noopener noreferrer"><img src="images/messia-identite.jpg" alt="Visuel de présentation de MESSIA sur smartphone" loading="lazy" width="543" height="760"></a><figcaption id="t-p1-s3">Identité visuelle (illustration)</figcaption></figure></div>
           <div class="quota-strip" aria-hidden="true"><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span><span></span><span></span></div>
           <div class="tag-row"><span class="tag">Node.js</span><span class="tag">Groq · Llama 3.3 70B</span><span class="tag">Supabase</span><span class="tag">Tavily</span><span class="tag">Render</span></div>
-          <div class="log-links"><a href="https://messia-v1-0.onrender.com" target="_blank" rel="noopener" id="t-p1-link">Voir le produit ↗</a><a href="https://github.com/messi-amour" target="_blank" rel="noopener" id="t-p1-code">Code sur GitHub ↗</a></div>
+          <div class="log-links"><a href="https://messia-v1-0.onrender.com" id="t-p1-link" target="_blank" rel="noopener noreferrer">Voir le produit ↗</a><a href="https://github.com/messi-amour" id="t-p1-code" target="_blank" rel="noopener noreferrer">Code sur GitHub ↗</a></div>
         </div>
       </div>
 
@@ -243,7 +246,7 @@
           <div class="case"><p><b id="t-p2-k1">Problème</b><span id="t-p2-v1">Donner aux établissements d'Afrique centrale un outil unique pour gérer élèves, notes et bulletins.</span></p><p><b id="t-p2-k2">Solution</b><span id="t-p2-v2">Isolation des données par école, authentification JWT par rôle (six rôles), bulletins PDF générés automatiquement. Backend Django/DRF, frontend React.</span></p><p><b id="t-p2-k3">Avancement</b><span id="t-p2-v3">Backend validé sur six modules ; frontend en cours de connexion au backend réel, avec un mode démo complet pour les modules restants. Non public, démo sur demande.</span></p></div>
           
           <div class="tag-row"><span class="tag">Django 5 · DRF</span><span class="tag">PostgreSQL</span><span class="tag">React · TypeScript</span><span class="tag">Tailwind CSS</span><span class="tag">WeasyPrint</span></div>
-          <div class="log-links"><a href="https://wa.me/242065487336?text=Bonjour%20Messi%2C%20j%27aimerais%20voir%20une%20d%C3%A9mo%20de%20SmartSchool%20Africa." target="_blank" rel="noopener" id="t-p2-link">Demander une démo ↗</a></div>
+          <div class="log-links"><a href="https://wa.me/242065487336?text=Bonjour%20Messi%2C%20j%27aimerais%20voir%20une%20d%C3%A9mo%20de%20SmartSchool%20Africa." id="t-p2-link" target="_blank" rel="noopener noreferrer">Demander une démo ↗</a></div>
         </div>
       </div>
 
@@ -269,11 +272,44 @@
           <div class="case"><p><b id="t-p4-k1">Problème</b><span id="t-p4-v1">Les petits commerces de Brazzaville et Pointe-Noire vendent déjà par WhatsApp, mais ont rarement une vitrine en ligne soignée.</span></p><p><b id="t-p4-k2">Solution</b><span id="t-p4-v2">Sites rapides et pensés pour le mobile : catalogue, FAQ, carte, réseaux sociaux, et commande ou réservation redirigée vers WhatsApp.</span></p><p><b id="t-p4-k3">Résultat</b><span id="t-p4-v3">Premiers sites en cours de réalisation : une boutique de mode en ligne et un restaurant.</span></p></div>
           
           <div class="tag-row"><span class="tag">HTML / CSS</span><span class="tag">JavaScript</span><span class="tag">Mobile-first</span><span class="tag">WhatsApp</span></div>
-          <div class="log-links"><a href="https://github.com/messi-amour" target="_blank" rel="noopener" id="t-p4-code">Code sur GitHub ↗</a></div>
+          <div class="log-links"><a href="https://github.com/messi-amour" id="t-p4-code" target="_blank" rel="noopener noreferrer">Code sur GitHub ↗</a></div>
         </div>
       </div>
 
     </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="services">
+  <div class="wrap reveal">
+    <div class="section-head">
+      <span class="section-eyebrow" id="t-svc-eyebrow">Services</span>
+    </div>
+    <div class="section-head" style="margin-top:-10px;"><span class="section-title" id="t-svc-title">Ce que je <em>propose</em></span></div>
+    <div class="opp-grid">
+      <div class="opp-card">
+        <h3 id="t-svc1-h">Site vitrine / boutique en ligne</h3>
+        <p id="t-svc1-p">Un site rapide, pensé pour le mobile, qui présente votre activité et dirige vos clients vers WhatsApp pour commander ou réserver.</p>
+        <p class="svc-price" id="t-svc1-price">À partir de 100 000 FCFA</p>
+        <p class="svc-for" id="t-svc1-f">Idéal pour : commerces, restaurants, indépendants.</p>
+      </div>
+      <div class="opp-card">
+        <h3 id="t-svc2-h">Application web sur mesure</h3>
+        <p id="t-svc2-p">Un outil métier avec comptes utilisateurs, rôles et base de données : gestion, suivi, facturation, tableaux de bord.</p>
+        <p class="svc-price" id="t-svc2-price">Sur devis</p>
+        <p class="svc-for" id="t-svc2-f">Idéal pour : PME, écoles, associations, startups.</p>
+      </div>
+      <div class="opp-card">
+        <h3 id="t-svc3-h">Assistant IA / chatbot</h3>
+        <p id="t-svc3-p">Un assistant conversationnel en français pour votre activité : personas adaptés, recherche web, quotas et offres payantes selon vos besoins.</p>
+        <p class="svc-price" id="t-svc3-price">Sur devis</p>
+        <p class="svc-for" id="t-svc3-f">Idéal pour : services clients, produits numériques, équipes.</p>
+      </div>
+    </div>
+    <p class="svc-note" id="t-svc-note">Tarif indicatif selon le nombre de pages et les options ; devis précis après un échange sur votre besoin.</p>
+    <a class="btn btn-primary svc-cta" href="https://wa.me/242065487336?text=Bonjour%20Messi%2C%20j%27aimerais%20un%20devis%20pour%20un%20projet." target="_blank" rel="noopener noreferrer" id="t-svc-cta">Demander un devis →</a>
   </div>
 </section>
 
@@ -372,10 +408,10 @@
 
       <div class="hero-cta" style="justify-content:center;">
         <a class="btn btn-ghost" href="mailto:messiamour034@gmail.com">messiamour034@gmail.com</a>
-        <a class="btn btn-whatsapp" href="https://wa.me/242065487336" target="_blank" rel="noopener">WhatsApp</a>
-        <a class="btn btn-ghost" href="cv-messi-amour-fr.pdf" target="_blank" id="t-cta-cv-2">Télécharger le CV ↓</a>
-        <a class="btn btn-ghost" href="https://github.com/messi-amour" target="_blank">GitHub ↗</a>
-        <a class="btn btn-ghost" href="https://www.linkedin.com/in/messi-amour-440a4b431" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn btn-whatsapp" href="https://wa.me/242065487336" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a class="btn btn-ghost" href="cv-messi-amour-fr.pdf" id="t-cta-cv-2" target="_blank" rel="noopener noreferrer">Télécharger le CV ↓</a>
+        <a class="btn btn-ghost" href="https://github.com/messi-amour" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/messi-amour-440a4b431" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
       </div>
     </div>
   </div>
