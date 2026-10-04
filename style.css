@@ -343,3 +343,16 @@ html{ scroll-padding-top:74px; }
 
 /* ── PRICE LINE ───────────────────────────── */
 .svc-price{ font-family:var(--serif); font-size:19px !important; font-weight:600; color:var(--cream) !important; margin:14px 0 0 !important; }
+
+/* ── SCREENSHOTS: full card width (equal heights) ── */
+.shots{ overflow:visible; padding:4px 0 8px; }
+.shots figure{ min-width:0; }
+.shots figure:nth-child(1){ flex:0.533 1 0; }
+.shots figure:nth-child(2){ flex:0.708 1 0; }
+.shots figure:nth-child(3){ flex:0.714 1 0; }
+.shots img{ width:100%; height:auto; }
+@media (max-width:640px){
+  .shots{ overflow-x:auto; }
+  .shots figure:nth-child(n){ flex:0 0 auto; }
+  .shots img{ height:300px; width:auto; }
+}
