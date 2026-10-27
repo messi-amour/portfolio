@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "t-title": "Messi Amour — Full-Stack Developer & Tech Entrepreneur",
       "t-meta-desc": "Self-taught full-stack developer and tech entrepreneur in Brazzaville. Creator of MESSIA (AI) and SmartSchool Africa (school SaaS). Available for freelance work.",
       "t-og-title": "Messi Amour — Full-Stack Developer & Tech Entrepreneur",
-      "t-og-desc": "AI assistant in production (MESSIA), school SaaS in development (SmartSchool Africa), websites for local businesses. Available for freelance work and product collaborations.",
+      "t-og-desc": "AI assistant in beta (MESSIA), school SaaS in development (SmartSchool Africa), websites for local businesses. Available for freelance work and product collaborations.",
       "t-og-locale": "en_US",
       "t-tw-title": "Messi Amour — Full-Stack Developer & Tech Entrepreneur",
       "t-tw-desc": "AI assistant (MESSIA) and school SaaS (SmartSchool Africa) designed, coded and deployed solo.",
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "t-eyebrow": "Brazzaville, Congo — available immediately",
       "t-badge": "Currently building SmartSchool Africa",
       "t-h1": "I design, I code, I ship products.<br><em>Solo at the controls, AI as an accelerator.</em>",
-      "t-lead": "Self-taught full-stack developer and tech entrepreneur. I designed, coded and deployed an AI assistant that is now in production, I'm building a SaaS platform for schools in Central Africa, and I create websites for local businesses. I'm looking for freelance missions where I can turn an idea into a live product, fast and cleanly.",
+      "t-lead": "Self-taught full-stack developer and tech entrepreneur. I designed, coded and deployed an AI assistant that is now live in beta, I'm building a SaaS platform for schools in Central Africa, and I create websites for local businesses. I'm looking for freelance missions where I can turn an idea into a live product, fast and cleanly.",
       "t-pill0": "Freelance mission",
       "t-pill1": "Product / startup collaboration",
       "t-pill2": "Full-stack developer internship",
@@ -188,13 +188,13 @@ document.addEventListener('DOMContentLoaded', () => {
       "t-process4-p": "I put the product in front of real users, gather feedback, and adjust — the product keeps evolving after the first launch.",
       "t-formation-eyebrow": "Background",
       "t-formation-title": "Education",
-      "t-f1-status": "in progress",
+      "t-f1-status": "enrolling November 2026",
       "t-f1-role": "Computer Science Degree",
-      "t-f1-p": "Second year of the degree in progress, run alongside the development of SmartSchool Africa and my freelance projects.",
+      "t-f1-p": "Enrolling in the second year of the degree in November 2026, to be run alongside the development of SmartSchool Africa and my freelance projects.",
       "t-f0-status": "completed",
       "t-f0-role": "Computer Science Degree",
-      "t-f0-h": "Year 1 Computer Science — IGT",
-      "t-f0-p": "First year of the degree completed, run alongside the development of MESSIA and SmartSchool Africa.",
+      "t-f0-h": "Year 1 Computer Science, AI track — IGT",
+      "t-f0-p": "First year of the degree completed, in the Artificial Intelligence track, run alongside the development of MESSIA and SmartSchool Africa.",
       "t-f2-status": "6 months",
       "t-f2-role": "Intensive training",
       "t-f2-h": "Programming — ACSI",
@@ -218,15 +218,13 @@ document.addEventListener('DOMContentLoaded', () => {
       "t-p1-s1": "Home \u2014 Android",
       "t-p1-s2": "Home \u2014 iPhone",
       "t-p1-s3": "Chat \u2014 iPhone",
-      "t-svc1-price": "From 100,000 FCFA",
+      "t-svc1-price": "From 90,000 FCFA",
       "t-svc2-price": "On quote",
       "t-svc3-price": "On quote",
       "t-num1-l": "Adaptive conversational personas",
       "t-num2-l": "Access tiers: guest, free, premium",
       "t-num3-l": "Validated backend modules (SmartSchool)",
       "t-num4-l": "MESSIA beta testers",
-      "t-num5-l": "Inference speed (Groq LPU)",
-      "t-num6-l": "Time to first token",
       "t-skills-eyebrow": "Skills",
       "t-skills-title": "Technical <em>skills</em>",
       "t-skills-h1": "Languages",
@@ -243,26 +241,27 @@ document.addEventListener('DOMContentLoaded', () => {
       "t-opp1-h": "Product / startup collaboration",
       "t-opp1-p": "A team or founder looking for a developer who can think product, not just execute tickets.",
       "t-opp2-h": "Full-stack developer internship",
-      "t-opp2-p": "A technical team where I can learn fast, contribute to a real product, and come away with more engineering rigor than I have today.",
+      "t-opp2-p": "A technical team where I can learn fast, contribute to a real product and sharpen my engineering practice alongside experienced developers.",
       "t-opp3-h": "Work-study (Alternance)",
       "t-opp3-p": "A work-study contract to combine ongoing training with work on a real product, alongside a team willing to invest over time.",
       "t-contact-h2": "Let's build something together.",
-      "t-contact-p": "I'm available immediately for a freelance mission, a product collaboration, an internship or a work-study contract. If my profile matches what you're looking for, let's not waste time — write to me.",
+      "t-contact-p": "I'm available immediately, alongside my studies, for a freelance mission, a product collaboration, an internship or a work-study contract. If my profile matches what you're looking for, let's not waste time — write to me.",
       "t-form-label-name": "Name",
       "t-form-label-email": "Email",
       "t-form-label-message": "Message",
       "t-form-submit": "Send →",
       "t-form-or": "or write to me directly",
-      "t-footer": "© 2026 Messi Amour · Republic of Congo",
+      "t-footer": "© 2026 Messi Amour · Brazzaville, Republic of Congo",
       "t-f1-h": "Year 2 Computer Science — IGT",
-      "t-f3-h": "High school diploma",
+      "t-f3-h": "Baccalauréat — Series C (Mathematics)",
+      "t-f3-p": "June 2024 session — CS Bilingue Light World School.",
       "t-skills-h3-li6": "AI-assisted development",
-      "t-p1-status": "live",
+      "t-p1-status": "beta",
       "t-p1-role": "Conversational AI assistant",
       "t-p1-k1": "Problem",
       "t-p1-v1": "Offer a fast, French-language AI assistant that works from the first message and can pay for itself.",
       "t-p1-k2": "Solution",
-      "t-p1-v2": "Five personas with adaptive temperature, function-calling web search, real-time streaming, conversation memory and voice command, on a serverless architecture. Three-tier freemium (guest, free account, paid plans) with quotas tracked in Supabase and a WhatsApp-based upgrade flow.",
+      "t-p1-v2": "Four personas with adaptive temperature, function-calling web search, real-time streaming, conversation memory and voice command, on a serverless architecture. Three-tier freemium (guest, free account, paid plans) with quotas tracked in Supabase and a WhatsApp-based upgrade flow.",
       "t-p1-k3": "Result",
       "t-p1-v3": "Live since late June 2026, beta-tested by around ten users. Groq (LPU) inference: up to ~300 tokens/s, first token under 200 ms.",
       "t-p1-link": "View product ↗",
@@ -283,17 +282,25 @@ document.addEventListener('DOMContentLoaded', () => {
       "t-p3-k2": "Planned solution",
       "t-p3-v2": "Invoice creation, payment tracking and automatic reminders for late clients. Freemium model: limited free tier, paid plan for unlimited use.",
       "t-p3-k3": "Status",
-      "t-p3-v3": "Specification finalized, MVP in preparation. First customers targeted through my network of SMEs in Pointe-Noire.",
-      "t-p4-title": "Showcase websites",
-      "t-p4-status": "in progress",
+      "t-p3-v3": "Specification finalized, MVP in preparation. First customers targeted through my network of SMEs.",
+      "t-p4-title": "MADigital — WhatsApp order pages",
+      "t-p4-status": "live example",
       "t-p4-role": "Websites for local businesses",
       "t-p4-k1": "Problem",
-      "t-p4-v1": "Small shops in Brazzaville and Pointe-Noire already sell through WhatsApp, but rarely have a polished online storefront.",
+      "t-p4-v1": "Small shops in Brazzaville already sell through WhatsApp, but orders arrive in pieces: \"how much?\", \"do you deliver?\", with no total or neighbourhood.",
       "t-p4-k2": "Solution",
-      "t-p4-v2": "Fast, mobile-first sites: catalogue, FAQ, map, social links, and orders or bookings routed to WhatsApp.",
-      "t-p4-k3": "Result",
-      "t-p4-v3": "First sites under way: an online fashion shop and a restaurant.",
-      "t-p4-code": "Code on GitHub ↗"
+      "t-p4-v2": "A mobile page with menu or catalogue and prices, and an Order button that sends a ready-written WhatsApp message (items, total, pickup or delivery, neighbourhood). WhatsApp Business set up, MTN MoMo and Airtel Money instructions, QR code. Delivered within 72 h.",
+      "t-p4-k3": "Progress",
+      "t-p4-v3": "Offer launched in 2026, with a live example page you can visit.",
+      "t-p4-link": "View the example page ↗",
+      "t-skip": "Skip to content",
+      "t-cta-cv-es": "CV in Spanish ↓",
+      "t-process1-n": "01 — SCOPING",
+      "t-process2-n": "02 — ARCHITECTURE",
+      "t-process3-n": "03 — BUILD",
+      "t-process4-n": "04 — ITERATION",
+      "t-log-eyebrow": "Projects",
+      "t-log-title": "Build <em>log</em>"
 }
   };
 
@@ -337,7 +344,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // The CV download links point to a different file per language.
-  const cvHref = { fr: 'cv-messi-amour-fr.pdf', en: 'cv-messi-amour-fr.pdf' };
+  const cvHref = { fr: 'cv-messi-amour-fr.pdf', en: 'cv-messi-amour-en.pdf' };
   const cvLinkIds = ['t-cta-cv-1', 't-cta-cv-2'];
 
   // Priority for the initial language: explicit ?lang= URL param (e.g. for
@@ -348,7 +355,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const urlLang = new URLSearchParams(window.location.search).get('lang');
     if (urlLang === 'en' || urlLang === 'fr') return urlLang;
 
-    const saved = localStorage.getItem('site-lang');
+    let saved = null;
+    try { saved = localStorage.getItem('site-lang'); } catch (e) {}
     if (saved === 'en' || saved === 'fr') return saved;
 
     const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
@@ -376,7 +384,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const el = document.getElementById(id);
       if (el) el.setAttribute('href', cvHref[lang]);
     });
-    localStorage.setItem('site-lang', lang);
+    try { localStorage.setItem('site-lang', lang); } catch (e) {}
     currentLang = lang;
     updateThemeLabel();
   }

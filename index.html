@@ -18,15 +18,13 @@
   Le site reste une seule page avec toggle EN/FR en JS (pas deux URLs).
 -->
 <link rel="canonical" href="https://messi-amour.github.io/portfolio/" />
-<link rel="alternate" hreflang="fr" href="https://messi-amour.github.io/portfolio/" />
-<link rel="alternate" hreflang="en" href="https://messi-amour.github.io/portfolio/?lang=en" />
-<link rel="alternate" hreflang="x-default" href="https://messi-amour.github.io/portfolio/" />
 
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://messi-amour.github.io/portfolio/" />
 <meta id="t-og-title" property="og:title" content="Messi Amour — Développeur full-stack & entrepreneur tech" />
-<meta id="t-og-desc" property="og:description" content="Assistant IA en production (MESSIA), SaaS scolaire en développement (SmartSchool Africa), sites vitrines pour commerces. Disponible pour missions freelance et collaborations produit." />
+<meta id="t-og-desc" property="og:description" content="Assistant IA en bêta-test (MESSIA), SaaS scolaire en développement (SmartSchool Africa), sites vitrines pour commerces. Disponible pour missions freelance et collaborations produit." />
 <meta property="og:image" content="https://messi-amour.github.io/portfolio/og-image.png" />
+<meta property="og:image:alt" content="Messi Amour — Développeur full-stack et entrepreneur tech, Brazzaville" />
 <meta id="t-og-locale" property="og:locale" content="fr_FR" />
 
 <meta name="twitter:card" content="summary_large_image" />
@@ -52,6 +50,7 @@
     "addressLocality": "Brazzaville",
     "addressCountry": "CG"
   },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "IGT — Institut de Gestion et de Technologie" },
   "sameAs": [
     "https://github.com/messi-amour",
     "https://www.linkedin.com/in/messi-amour-440a4b431"
@@ -61,6 +60,7 @@
 </script>
 </head>
 <body>
+<a class="skip" href="#main" id="t-skip">Aller au contenu</a>
 
 <nav>
   <div class="wrap">
@@ -83,12 +83,13 @@
   </div>
 </nav>
 
+<main id="main">
 <header class="hero">
   <div class="wrap">
     <div class="eyebrow" id="t-eyebrow">Brazzaville, Congo — disponible immédiatement</div>
     <div class="status-badge"><span class="status-dot"></span><span id="t-badge">Actuellement en train de coder SmartSchool Africa</span></div>
     <h1 id="t-h1">Je conçois, je code, je lance des produits.<br><em>Seul aux commandes, l'IA en accélérateur.</em></h1>
-    <p class="lead" id="t-lead">Développeur full-stack autodidacte et entrepreneur tech. J'ai conçu, codé et déployé un assistant IA aujourd'hui en production, je construis une plateforme SaaS pour les écoles d'Afrique centrale et je crée des sites vitrines pour les commerces locaux. Je cherche des missions freelance où transformer une idée en produit en ligne, vite et proprement.</p>
+    <p class="lead" id="t-lead">Développeur full-stack autodidacte et entrepreneur tech. J'ai conçu, codé et déployé un assistant IA aujourd'hui en ligne en bêta-test, je construis une plateforme SaaS pour les écoles d'Afrique centrale et je crée des sites vitrines pour les commerces locaux. Je cherche des missions freelance où transformer une idée en produit en ligne, vite et proprement.</p>
     <div class="hero-meta">
       <span class="pill" id="t-pill0">Mission freelance</span>
       <span class="pill" id="t-pill1">Collaboration produit / startup</span>
@@ -97,7 +98,6 @@
     </div>
     <div class="hero-cta">
       <a class="btn btn-primary" href="https://wa.me/242065487336?text=Bonjour%20Messi%2C%20j%27ai%20vu%20ton%20portfolio%20et%20j%27aimerais%20discuter%20d%27un%20projet." id="t-cta-work" target="_blank" rel="noopener noreferrer">Travaillons ensemble →</a>
-      <a class="btn btn-whatsapp" href="https://wa.me/242065487336" target="_blank" rel="noopener noreferrer">WhatsApp</a>
       <a class="btn btn-ghost" href="cv-messi-amour-fr.pdf" id="t-cta-cv-1" target="_blank" rel="noopener noreferrer">Télécharger le CV ↓</a>
       <a class="btn btn-ghost" href="https://github.com/messi-amour" target="_blank" rel="noopener noreferrer">GitHub</a>
       <a class="btn btn-ghost" href="https://www.linkedin.com/in/messi-amour-440a4b431" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -108,12 +108,10 @@
 <section id="numbers" class="numbers" aria-label="Chiffres clés">
   <div class="wrap">
     <div class="num-grid">
-      <div class="num"><div><span class="num-val" data-count="5" data-prefix="" data-suffix="">5</span></div><div class="num-lbl" id="t-num1-l">Personas conversationnels adaptatifs</div></div>
+      <div class="num"><div><span class="num-val" data-count="4" data-prefix="" data-suffix="">4</span></div><div class="num-lbl" id="t-num1-l">Personas conversationnels adaptatifs</div></div>
       <div class="num"><div><span class="num-val" data-count="3" data-prefix="" data-suffix="">3</span></div><div class="num-lbl" id="t-num2-l">Paliers d'accès : invité, gratuit, premium</div></div>
       <div class="num"><div><span class="num-val" data-count="6" data-prefix="" data-suffix="">6</span></div><div class="num-lbl" id="t-num3-l">Modules backend validés (SmartSchool)</div></div>
       <div class="num"><div><span class="num-val" data-count="10" data-prefix="~" data-suffix="">~10</span></div><div class="num-lbl" id="t-num4-l">Bêta-testeurs de MESSIA</div></div>
-      <div class="num"><div><span class="num-val" data-count="300" data-prefix="~" data-suffix="">~300</span><span class="num-unit">tokens/s</span></div><div class="num-lbl" id="t-num5-l">Vitesse d'inférence (Groq LPU)</div></div>
-      <div class="num"><div><span class="num-val" data-count="200" data-prefix="<" data-suffix=""><200</span><span class="num-unit">ms</span></div><div class="num-lbl" id="t-num6-l">Délai du premier token</div></div>
     </div>
   </div>
 </section>
@@ -125,7 +123,7 @@
     <div class="section-head">
       <span class="section-eyebrow" id="t-about-eyebrow">Profil</span>
     </div>
-    <div class="section-head" style="margin-top:-10px;"><span class="section-title" id="t-about-title">À <em>propos</em></span></div>
+    <div class="section-head" style="margin-top:-10px;"><h2 class="section-title" id="t-about-title">À <em>propos</em></h2></div>
     <div class="about-grid">
       <div class="about-text">
         <p id="t-about-p1">Je m'appelle <strong>Messi Amour</strong>. Je ne me contente pas d'apprendre à coder — je livre. Mes projets ne sont pas des exercices académiques : ce sont des applications réelles, pensées pour de vrais utilisateurs, avec les arbitrages techniques et produit que cela impose.</p>
@@ -147,25 +145,25 @@
     <div class="section-head">
       <span class="section-eyebrow" id="t-process-eyebrow">Méthode</span>
     </div>
-    <div class="section-head" style="margin-top:-10px;"><span class="section-title" id="t-process-title">Comment je <em>travaille</em></span></div>
+    <div class="section-head" style="margin-top:-10px;"><h2 class="section-title" id="t-process-title">Comment je <em>travaille</em></h2></div>
     <div class="process-grid">
       <div class="process-step">
-        <span class="process-num">01 — CADRAGE</span>
+        <span class="process-num" id="t-process1-n">01 — CADRAGE</span>
         <h3 id="t-process1-h">Cadrage</h3>
         <p id="t-process1-p">Je clarifie le vrai problème avant d'écrire une ligne de code : utilisateurs cibles, contraintes réelles, définition d'une v1 utile.</p>
       </div>
       <div class="process-step">
-        <span class="process-num">02 — ARCHITECTURE</span>
+        <span class="process-num" id="t-process2-n">02 — ARCHITECTURE</span>
         <h3 id="t-process2-h">Architecture</h3>
         <p id="t-process2-p">Je choisis la stack et la structure des données en fonction du produit, pas par habitude — en pensant déploiement et coûts dès le départ.</p>
       </div>
       <div class="process-step">
-        <span class="process-num">03 — BUILD</span>
+        <span class="process-num" id="t-process3-n">03 — BUILD</span>
         <h3 id="t-process3-h">Build</h3>
         <p id="t-process3-p">Je code, je déploie tôt et souvent, et je garde une version fonctionnelle en ligne plutôt qu'un projet qui n'existe que sur ma machine.</p>
       </div>
       <div class="process-step">
-        <span class="process-num">04 — ITÉRATION</span>
+        <span class="process-num" id="t-process4-n">04 — ITÉRATION</span>
         <h3 id="t-process4-h">Itération</h3>
         <p id="t-process4-p">Je mets le produit devant de vrais utilisateurs, je récolte les retours, et j'ajuste — le produit continue d'évoluer après le premier lancement.</p>
       </div>
@@ -180,16 +178,16 @@
     <div class="section-head">
       <span class="section-eyebrow" id="t-formation-eyebrow">Parcours</span>
     </div>
-    <div class="section-head" style="margin-top:-10px;"><span class="section-title" id="t-formation-title">Formation</span></div>
+    <div class="section-head" style="margin-top:-10px;"><h2 class="section-title" id="t-formation-title">Formation</h2></div>
     <div class="log">
 
-      <div class="log-entry live">
+      <div class="log-entry soon">
         <div class="log-dot"></div>
-        <div class="log-meta"><span>2026–</span><span>·</span><span id="t-f1-status">en cours</span></div>
+        <div class="log-meta"><span>2026</span><span>·</span><span id="t-f1-status">inscription en novembre 2026</span></div>
         <div class="log-card">
           <span class="role" id="t-f1-role">Licence Informatique</span>
           <h3 id="t-f1-h">L2 Informatique — IGT</h3>
-          <p id="t-f1-p">Deuxième année de licence en cours, menée en parallèle du développement de SmartSchool Africa et de mes projets freelance.</p>
+          <p id="t-f1-p">Inscription en deuxième année de licence en novembre 2026, à mener en parallèle du développement de SmartSchool Africa et de mes projets freelance.</p>
         </div>
       </div>
 
@@ -198,8 +196,8 @@
         <div class="log-meta"><span>2025–2026</span><span>·</span><span id="t-f0-status">validée</span></div>
         <div class="log-card">
           <span class="role" id="t-f0-role">Licence Informatique</span>
-          <h3 id="t-f0-h">L1 Informatique — IGT</h3>
-          <p id="t-f0-p">Première année de licence validée, menée en parallèle du développement de MESSIA et de SmartSchool Africa.</p>
+          <h3 id="t-f0-h">L1 Informatique, parcours IA — IGT</h3>
+          <p id="t-f0-p">Première année de licence validée, en parcours Intelligence Artificielle, menée en parallèle du développement de MESSIA et de SmartSchool Africa.</p>
         </div>
       </div>
 
@@ -218,7 +216,8 @@
         <div class="log-meta"><span>2024</span><span>·</span><span id="t-f3-status">obtenu</span></div>
         <div class="log-card">
           <span class="role" id="t-f3-role">Baccalauréat</span>
-          <h3 id="t-f3-h">Diplôme du secondaire</h3>
+          <h3 id="t-f3-h">Baccalauréat — Série C (Mathématiques)</h3>
+          <p id="t-f3-p">Session de juin 2024 — CS Bilingue Light World School.</p>
         </div>
       </div>
 
@@ -233,16 +232,16 @@
     <div class="section-head">
       <span class="section-eyebrow" id="t-log-eyebrow">Projets</span>
     </div>
-    <div class="section-head" style="margin-top:-10px;"><span class="section-title" id="t-log-title">Journal de <em>build</em></span></div>
+    <div class="section-head" style="margin-top:-10px;"><h2 class="section-title" id="t-log-title">Journal de <em>build</em></h2></div>
 
     <div class="log">
       <div class="log-entry live">
         <div class="log-dot"></div>
-        <div class="log-meta"><span class="log-hash">#messia</span><span>·</span><span>2026</span><span>·</span><span id="t-p1-status">en production</span></div>
+        <div class="log-meta"><span class="log-hash">#messia</span><span>·</span><span>2026</span><span>·</span><span id="t-p1-status">bêta-test</span></div>
         <div class="log-card">
           <span class="role" id="t-p1-role">Assistant IA conversationnel</span>
           <h3>MESSIA</h3>
-          <div class="case"><p><b id="t-p1-k1">Problème</b><span id="t-p1-v1">Proposer un assistant IA en français, rapide, utilisable dès le premier message et capable de se financer.</span></p><p><b id="t-p1-k2">Solution</b><span id="t-p1-v2">Cinq personas à température adaptative, recherche web par function calling, streaming temps réel, mémoire de conversation et commande vocale, sur une architecture serverless. Freemium à trois paliers (invité, compte gratuit, offres payantes) avec quotas suivis dans Supabase et passage à l'offre premium via WhatsApp.</span></p><p><b id="t-p1-k3">Résultat</b><span id="t-p1-v3">En ligne depuis fin juin 2026, testé en bêta par une dizaine d'utilisateurs. Inférence Groq (LPU) : jusqu'à ~300 tokens/s, premier token en moins de 200 ms.</span></p></div>
+          <div class="case"><p><b id="t-p1-k1">Problème</b><span id="t-p1-v1">Proposer un assistant IA en français, rapide, utilisable dès le premier message et capable de se financer.</span></p><p><b id="t-p1-k2">Solution</b><span id="t-p1-v2">Quatre personas à température adaptative, recherche web par function calling, streaming temps réel, mémoire de conversation et commande vocale, sur une architecture serverless. Freemium à trois paliers (invité, compte gratuit, offres payantes) avec quotas suivis dans Supabase et passage à l'offre premium via WhatsApp.</span></p><p><b id="t-p1-k3">Résultat</b><span id="t-p1-v3">En ligne depuis fin juin 2026, testé en bêta par une dizaine d'utilisateurs. Inférence Groq (LPU) : jusqu'à ~300 tokens/s, premier token en moins de 200 ms.</span></p></div>
           <div class="shots"><figure><a href="images/messia-android.jpg" target="_blank" rel="noopener noreferrer"><img src="images/messia-android.jpg" alt="Écran d'accueil de MESSIA sur Android" loading="lazy" width="532" height="760"></a><figcaption id="t-p1-s1">Accueil — Android</figcaption></figure><figure><a href="images/messia-iphone.jpg" target="_blank" rel="noopener noreferrer"><img src="images/messia-iphone.jpg" alt="Écran d'accueil de MESSIA sur iPhone" loading="lazy" width="532" height="760"></a><figcaption id="t-p1-s2">Accueil — iPhone</figcaption></figure><figure><a href="images/messia-chat.jpg" target="_blank" rel="noopener noreferrer"><img src="images/messia-chat.jpg" alt="Conversation avec MESSIA sur iPhone : réponse structurée" loading="lazy" width="532" height="760"></a><figcaption id="t-p1-s3">Conversation — iPhone</figcaption></figure></div>
           <div class="quota-strip" aria-hidden="true"><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span><span></span><span></span></div>
           <div class="tag-row"><span class="tag">Node.js</span><span class="tag">Groq · Llama 3.3 70B</span><span class="tag">Supabase</span><span class="tag">Tavily</span><span class="tag">Render</span></div>
@@ -269,7 +268,7 @@
         <div class="log-card">
           <span class="role" id="t-p3-role">SaaS fintech</span>
           <h3>Factura</h3>
-          <div class="case"><p><b id="t-p3-k1">Problème</b><span id="t-p3-v1">Aider les PME et freelances d'Afrique centrale à facturer en FCFA et à suivre ce qui a été payé, sans outil comptable lourd.</span></p><p><b id="t-p3-k2">Solution prévue</b><span id="t-p3-v2">Création de factures, suivi des paiements et rappels automatiques pour les clients en retard. Modèle freemium : version gratuite limitée, offre payante pour l'illimité.</span></p><p><b id="t-p3-k3">Statut</b><span id="t-p3-v3">Cahier des charges finalisé, MVP en préparation. Premiers clients visés via mon réseau de PME à Pointe-Noire.</span></p></div>
+          <div class="case"><p><b id="t-p3-k1">Problème</b><span id="t-p3-v1">Aider les PME et freelances d'Afrique centrale à facturer en FCFA et à suivre ce qui a été payé, sans outil comptable lourd.</span></p><p><b id="t-p3-k2">Solution prévue</b><span id="t-p3-v2">Création de factures, suivi des paiements et rappels automatiques pour les clients en retard. Modèle freemium : version gratuite limitée, offre payante pour l'illimité.</span></p><p><b id="t-p3-k3">Statut</b><span id="t-p3-v3">Cahier des charges finalisé, MVP en préparation. Premiers clients visés via mon réseau de PME.</span></p></div>
           
           <div class="tag-row"><span class="tag">Fintech</span><span class="tag">FCFA</span><span class="tag">SaaS</span><span class="tag">Freemium</span></div>
           
@@ -278,14 +277,14 @@
 
       <div class="log-entry live">
         <div class="log-dot"></div>
-        <div class="log-meta"><span class="log-hash">#sites-vitrines</span><span>·</span><span>2026</span><span>·</span><span id="t-p4-status">en cours</span></div>
+        <div class="log-meta"><span class="log-hash">#sites-vitrines</span><span>·</span><span>2026</span><span>·</span><span id="t-p4-status">exemple en ligne</span></div>
         <div class="log-card">
           <span class="role" id="t-p4-role">Sites web pour commerces locaux</span>
-          <h3 id="t-p4-title">Sites vitrines</h3>
-          <div class="case"><p><b id="t-p4-k1">Problème</b><span id="t-p4-v1">Les petits commerces de Brazzaville et Pointe-Noire vendent déjà par WhatsApp, mais ont rarement une vitrine en ligne soignée.</span></p><p><b id="t-p4-k2">Solution</b><span id="t-p4-v2">Sites rapides et pensés pour le mobile : catalogue, FAQ, carte, réseaux sociaux, et commande ou réservation redirigée vers WhatsApp.</span></p><p><b id="t-p4-k3">Résultat</b><span id="t-p4-v3">Premiers sites en cours de réalisation : une boutique de mode en ligne et un restaurant.</span></p></div>
+          <h3 id="t-p4-title">MADigital — pages de commande WhatsApp</h3>
+          <div class="case"><p><b id="t-p4-k1">Problème</b><span id="t-p4-v1">Les petits commerces de Brazzaville vendent déjà par WhatsApp, mais les commandes arrivent en vrac : « c'est combien ? », « vous livrez ? », sans total ni quartier.</span></p><p><b id="t-p4-k2">Solution</b><span id="t-p4-v2">Une page mobile avec menu ou catalogue et prix, et un bouton Commander qui envoie sur WhatsApp un message déjà rédigé (produits, total, mode de réception, quartier). WhatsApp Business configuré, instructions MTN MoMo et Airtel Money, QR code. Livraison sous 72 h.</span></p><p><b id="t-p4-k3">Avancement</b><span id="t-p4-v3">Offre lancée en 2026, avec une page d'exemple en ligne que vous pouvez consulter.</span></p></div>
           
           <div class="tag-row"><span class="tag">HTML / CSS</span><span class="tag">JavaScript</span><span class="tag">Mobile-first</span><span class="tag">WhatsApp</span></div>
-          <div class="log-links"><a href="https://github.com/messi-amour" id="t-p4-code" target="_blank" rel="noopener noreferrer">Code sur GitHub ↗</a></div>
+          <div class="log-links"><a href="https://madigitalcg.netlify.app/" id="t-p4-link" target="_blank" rel="noopener noreferrer">Voir la page d'exemple ↗</a></div>
         </div>
       </div>
 
@@ -300,12 +299,12 @@
     <div class="section-head">
       <span class="section-eyebrow" id="t-svc-eyebrow">Services</span>
     </div>
-    <div class="section-head" style="margin-top:-10px;"><span class="section-title" id="t-svc-title">Ce que je <em>propose</em></span></div>
+    <div class="section-head" style="margin-top:-10px;"><h2 class="section-title" id="t-svc-title">Ce que je <em>propose</em></h2></div>
     <div class="opp-grid">
       <div class="opp-card">
         <h3 id="t-svc1-h">Site vitrine / boutique en ligne</h3>
         <p id="t-svc1-p">Un site rapide, pensé pour le mobile, qui présente votre activité et dirige vos clients vers WhatsApp pour commander ou réserver.</p>
-        <p class="svc-price" id="t-svc1-price">À partir de 100 000 FCFA</p>
+        <p class="svc-price" id="t-svc1-price">À partir de 90 000 FCFA</p>
         <p class="svc-for" id="t-svc1-f">Idéal pour : commerces, restaurants, indépendants.</p>
       </div>
       <div class="opp-card">
@@ -333,7 +332,7 @@
     <div class="section-head">
       <span class="section-eyebrow" id="t-skills-eyebrow">Compétences</span>
     </div>
-    <div class="section-head" style="margin-top:-10px;"><span class="section-title" id="t-skills-title">Compétences <em>techniques</em></span></div>
+    <div class="section-head" style="margin-top:-10px;"><h2 class="section-title" id="t-skills-title">Compétences <em>techniques</em></h2></div>
     <div class="skill-cols">
       <div class="skill-col">
         <h4 id="t-skills-h1">Langages</h4>
@@ -341,11 +340,11 @@
       </div>
       <div class="skill-col">
         <h4 id="t-skills-h2">Frameworks & Outils</h4>
-        <ul><li>Django / DRF</li><li>Node.js</li><li>Tailwind CSS</li></ul>
+        <ul><li>Django / DRF</li><li>Node.js</li><li>React</li><li>Tailwind CSS</li><li>WeasyPrint</li></ul>
       </div>
       <div class="skill-col">
         <h4 id="t-skills-h3">Infrastructure</h4>
-        <ul><li>Supabase</li><li>PostgreSQL</li><li>MongoDB</li><li>Render</li><li>Git / GitHub</li><li id="t-skills-h3-li5">Intégration API & IA</li><li id="t-skills-h3-li6">Développement assisté par IA</li></ul>
+        <ul><li>Supabase</li><li>PostgreSQL</li><li>MongoDB</li><li>Render</li><li>API REST · JWT · RLS</li><li>Git / GitHub</li><li id="t-skills-h3-li5">Intégration API & IA</li><li id="t-skills-h3-li6">Développement assisté par IA</li></ul>
       </div>
     </div>
     <div style="margin-top:34px;">
@@ -365,7 +364,7 @@
     <div class="section-head">
       <span class="section-eyebrow" id="t-opp-eyebrow">Opportunités</span>
     </div>
-    <div class="section-head" style="margin-top:-10px;"><span class="section-title" id="t-opp-title">Ce que je <em>recherche</em></span></div>
+    <div class="section-head" style="margin-top:-10px;"><h2 class="section-title" id="t-opp-title">Ce que je <em>recherche</em></h2></div>
     <div class="opp-grid">
       <div class="opp-card">
         <h3 id="t-opp0-h">Mission freelance</h3>
@@ -377,7 +376,7 @@
       </div>
       <div class="opp-card">
         <h3 id="t-opp2-h">Stage développeur full-stack</h3>
-        <p id="t-opp2-p">Une équipe technique où apprendre vite, contribuer à un vrai produit, et repartir avec plus de rigueur d'ingénierie que je n'en ai aujourd'hui.</p>
+        <p id="t-opp2-p">Une équipe technique où apprendre vite, contribuer à un vrai produit et monter en rigueur d'ingénierie auprès de développeurs expérimentés.</p>
       </div>
       <div class="opp-card">
         <h3 id="t-opp3-h">Alternance</h3>
@@ -391,7 +390,7 @@
   <div class="wrap reveal">
     <div class="contact-box">
       <h2 id="t-contact-h2">Construisons quelque chose ensemble.</h2>
-      <p id="t-contact-p">Je suis disponible immédiatement pour une mission freelance, une collaboration produit, un stage ou une alternance. Si mon profil correspond à ce que vous cherchez, ne perdons pas de temps — écrivez-moi.</p>
+      <p id="t-contact-p">Je suis disponible immédiatement, en parallèle de mes études, pour une mission freelance, une collaboration produit, un stage ou une alternance. Si mon profil correspond à ce que vous cherchez, ne perdons pas de temps — écrivez-moi.</p>
 
       <!--
         ⚠️ Remplacer YOUR_FORM_ID par ton propre ID Formspree :
@@ -423,12 +422,15 @@
         <a class="btn btn-ghost" href="mailto:messiamour034@gmail.com">messiamour034@gmail.com</a>
         <a class="btn btn-whatsapp" href="https://wa.me/242065487336" target="_blank" rel="noopener noreferrer">WhatsApp</a>
         <a class="btn btn-ghost" href="cv-messi-amour-fr.pdf" id="t-cta-cv-2" target="_blank" rel="noopener noreferrer">Télécharger le CV ↓</a>
+        <a class="btn btn-ghost" href="cv-messi-amour-es.pdf" id="t-cta-cv-es" target="_blank" rel="noopener noreferrer">CV en español ↓</a>
         <a class="btn btn-ghost" href="https://github.com/messi-amour" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
         <a class="btn btn-ghost" href="https://www.linkedin.com/in/messi-amour-440a4b431" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
       </div>
     </div>
   </div>
 </section>
+
+</main>
 
 <footer id="t-footer">© 2026 Messi Amour · Brazzaville, République du Congo</footer>
 
