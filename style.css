@@ -80,7 +80,7 @@ nav{
 nav .wrap{display:flex; align-items:center; justify-content:space-between; height:66px;}
 .nav-logo{
   font-family:var(--serif); font-weight:600; font-size:19px; letter-spacing:0.2px;
-  display:flex; align-items:center; gap:9px;
+  display:flex; align-items:center; gap:9px; margin-right:auto; padding-right:40px;
 }
 .nav-logo span{color:var(--gold); font-style:italic;}
 .nav-links{display:flex; gap:28px; font-size:13px; color:var(--dim); font-family:var(--mono);}
