@@ -445,3 +445,10 @@ html{ scroll-padding-top:74px; }
 .num-grid.mini .num{ padding:18px 16px; border-right:1px solid var(--line); border-bottom:none !important; }
 .num-grid.mini .num:last-child{ border-right:none; }
 .num-grid.mini .num-val{ font-size:clamp(26px,3vw,34px); }
+
+/* Services : offre MADigital */
+.svc-intro{ color:var(--dim); margin:0 0 26px; max-width:62ch; }
+.svc-list{ list-style:none; margin:16px 0 0; padding:0; display:grid; gap:7px; }
+.svc-list li{ position:relative; padding-left:16px; font-size:14px; color:var(--dim); line-height:1.5; }
+.svc-list li::before{ content:''; position:absolute; left:0; top:.6em; width:6px; height:6px; background:var(--gold); border-radius:1px; }
+.svc-actions{ display:flex; flex-wrap:wrap; gap:12px; }
