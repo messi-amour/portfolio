@@ -80,11 +80,11 @@ nav{
 nav .wrap{display:flex; align-items:center; justify-content:space-between; height:66px;}
 .nav-logo{
   font-family:var(--serif); font-weight:600; font-size:19px; letter-spacing:0.2px;
-  display:flex; align-items:center; gap:9px; margin-right:auto; padding-right:40px;
+  display:flex; align-items:center; gap:9px; margin-right:auto; padding-right:28px; flex-shrink:0;
 }
 .nav-logo span{color:var(--gold); font-style:italic;}
-.nav-links{display:flex; gap:28px; font-size:13px; color:var(--dim); font-family:var(--mono);}
-.nav-links a{position:relative; padding-bottom:3px;}
+.nav-links{display:flex; gap:24px; font-size:13px; color:var(--dim); font-family:var(--mono);}
+.nav-links a{position:relative; padding-bottom:3px; white-space:nowrap;}
 .nav-links a::after{
   content:''; position:absolute; left:0; bottom:0; width:0; height:1px;
   background:var(--gold); transition:width .25s ease;
@@ -452,3 +452,20 @@ html{ scroll-padding-top:74px; }
 .svc-list li{ position:relative; padding-left:16px; font-size:14px; color:var(--dim); line-height:1.5; }
 .svc-list li::before{ content:''; position:absolute; left:0; top:.6em; width:6px; height:6px; background:var(--gold); border-radius:1px; }
 .svc-actions{ display:flex; flex-wrap:wrap; gap:12px; }
+
+@media (max-width:1050px){ .nav-links{ gap:16px; font-size:12px; } nav .nav-logo{ padding-right:14px; } }
+
+/* Carte des projets par statut */
+.stat-list{ list-style:none; margin:0; padding:0; display:grid; gap:16px; }
+.stat-list li{ display:grid; gap:3px; }
+.stat-key{ font-family:var(--mono); font-size:11px; letter-spacing:.8px; text-transform:uppercase; color:var(--gold); }
+.stat-names{ font-family:var(--serif); font-size:17px; font-weight:600; color:var(--cream); }
+
+/* Grilles : services (3 colonnes), opportunités (2 x 2) */
+.opp-grid.opp-grid-3{ grid-template-columns:repeat(3,1fr); }
+.opp-grid.opp-grid-2{ grid-template-columns:repeat(2,1fr); }
+@media (max-width:900px){ .opp-grid.opp-grid-3{ grid-template-columns:1fr; } }
+@media (max-width:740px){ .opp-grid.opp-grid-2{ grid-template-columns:1fr; } }
+
+/* Titre de présentation (nom complet) */
+.hero h1{ font-size:clamp(30px,4.6vw,54px); line-height:1.12; }
