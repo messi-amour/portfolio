@@ -422,8 +422,8 @@ document.addEventListener('DOMContentLoaded', () => {
         sending: 'Envoi en cours…',
         success: 'Message envoyé — je réponds sous 24h.',
         error: "Erreur d'envoi. Écris-moi directement à " + CONTACT_EMAIL + '.',
-        missing: 'Renseigne ton nom, un email valide et ton message.',
-        mailto: "Ton application mail va s'ouvrir avec le message prérempli."
+        missing: 'Renseignez votre nom, un e-mail valide et votre message.',
+        mailto: "Votre application mail va s'ouvrir avec le message prérempli."
       },
       en: {
         sending: 'Sending…',
