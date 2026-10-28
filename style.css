@@ -469,3 +469,45 @@ html{ scroll-padding-top:74px; }
 
 /* Titre de présentation (nom complet) */
 .hero h1{ font-size:clamp(30px,4.6vw,54px); line-height:1.12; }
+
+
+/* ── Puces de statut ── */
+.status-chip{ display:inline-flex; align-items:center; gap:6px; padding:2px 10px; border-radius:20px; border:1px solid currentColor; font-size:11.5px; line-height:1.5; white-space:nowrap; }
+.status-chip::before, .stat-key::before{ content:''; display:inline-block; width:6px; height:6px; border-radius:50%; background:currentColor; flex-shrink:0; }
+.stat-key{ display:inline-flex; align-items:center; gap:7px; }
+.st-done{ color:#5fc08c; }
+.st-wip{ color:var(--gold); }
+.st-wip::before{ animation:chipPulse 1.8s ease-in-out infinite; }
+.st-soon{ color:var(--dim); border-style:dashed; }
+.stat-key.st-soon{ border:none; }
+:root[data-theme="light"] .st-done{ color:#1f7a4d; }
+@keyframes chipPulse{ 0%,100%{ opacity:1; transform:scale(1); } 50%{ opacity:.35; transform:scale(1.5); } }
+
+/* ── Offre Standard mise en avant ── */
+.opp-feat{ border-color:var(--gold); background:linear-gradient(160deg, var(--gold-soft), var(--card) 60%); box-shadow:0 14px 34px rgba(0,0,0,.28); }
+.opp-badge{ position:absolute; top:14px; right:14px; padding:3px 11px; border-radius:20px; background:var(--gold); color:#16120a; font-family:var(--mono); font-size:10.5px; font-weight:600; letter-spacing:.6px; text-transform:uppercase; }
+:root[data-theme="light"] .opp-badge{ color:#fff; }
+
+/* ── Bouton WhatsApp flottant (mobile) ── */
+.wa-float{ display:none; }
+@media (max-width:760px){
+  .wa-float{ position:fixed; right:16px; bottom:calc(16px + env(safe-area-inset-bottom, 0px)); z-index:90; display:inline-flex; align-items:center; gap:8px; padding:12px 18px; border-radius:30px; background:#25a560; color:#fff; font-weight:600; font-size:14px; box-shadow:0 10px 26px rgba(0,0,0,.4); transition:opacity .25s ease, transform .25s ease; }
+  .wa-float.is-hidden{ opacity:0; transform:translateY(16px); pointer-events:none; }
+}
+
+/* ── Visionneuse d'images ── */
+.shots a{ cursor:zoom-in; }
+.lightbox{ position:fixed; inset:0; z-index:1000; display:none; align-items:center; justify-content:center; gap:10px; padding:16px; background:rgba(8,7,10,.93); backdrop-filter:blur(6px); }
+.lightbox.open{ display:flex; animation:lbIn .22s ease; }
+.lb-fig{ margin:0; max-width:min(92vw,520px); display:flex; flex-direction:column; align-items:center; gap:12px; }
+.lb-img{ max-width:100%; max-height:76vh; border-radius:18px; box-shadow:0 24px 60px rgba(0,0,0,.6); background:#111; }
+.lb-cap{ font-family:var(--mono); font-size:12.5px; color:#cfc8ba; text-align:center; }
+.lb-dots{ display:flex; gap:8px; }
+.lb-dot{ width:8px; height:8px; padding:0; border:none; border-radius:50%; background:rgba(255,255,255,.28); cursor:pointer; }
+.lb-dot.on{ background:var(--gold); transform:scale(1.25); }
+.lb-btn{ width:44px; height:44px; flex-shrink:0; border:1px solid rgba(255,255,255,.18); border-radius:50%; background:rgba(255,255,255,.06); color:#fff; font-size:26px; line-height:1; cursor:pointer; }
+.lb-btn:hover{ background:rgba(255,255,255,.14); }
+.lb-close{ position:absolute; top:14px; right:14px; }
+@media (max-width:620px){ .lb-prev, .lb-next{ position:absolute; bottom:18px; } .lb-prev{ left:16px; } .lb-next{ right:16px; } .lb-dots{ margin-bottom:56px; } }
+@keyframes lbIn{ from{ opacity:0; } to{ opacity:1; } }
+@media (prefers-reduced-motion:reduce){ .st-wip::before, .lightbox.open{ animation:none; } .wa-float{ transition:none; } }

@@ -207,6 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "t-svc-note": "Payment: 50% at order, balance before access is handed over, by MTN MoMo or Airtel Money. Delivered within 72 h of receiving your content. Not included: photos, logo, domain name, ads, automatic online payment.",
       "t-svc-cta": "Request a quote →",
       "t-svc-demo": "View the example page ↗",
+      "t-svc1-badge": "Recommended",
       "t-svc1-h": "Standard",
       "t-svc1-price": "90,000 FCFA",
       "t-svc1-l1": "Mobile page, up to 20 products",
@@ -479,3 +480,101 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+
+/* ── Visionneuse des captures MESSIA + bouton WhatsApp flottant ── */
+(function () {
+  'use strict';
+  var isEn = function () { return (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0; };
+  var T = function () { return isEn()
+    ? { close: 'Close', prev: 'Previous image', next: 'Next image', dlg: 'Image viewer' }
+    : { close: 'Fermer', prev: 'Image précédente', next: 'Image suivante', dlg: "Visionneuse d'images" }; };
+
+  var links = Array.prototype.slice.call(document.querySelectorAll('.shots a'));
+  if (links.length) {
+    var idx = 0, box, imgEl, capEl, dotsEl, btnClose, btnPrev, btnNext, lastFocus = null, startX = null;
+
+    var build = function () {
+      box = document.createElement('div');
+      box.className = 'lightbox';
+      box.setAttribute('role', 'dialog');
+      box.setAttribute('aria-modal', 'true');
+      box.innerHTML =
+        '<button type="button" class="lb-btn lb-close">×</button>' +
+        '<button type="button" class="lb-btn lb-prev">‹</button>' +
+        '<figure class="lb-fig"><img class="lb-img" alt=""><figcaption class="lb-cap"></figcaption><div class="lb-dots"></div></figure>' +
+        '<button type="button" class="lb-btn lb-next">›</button>';
+      document.body.appendChild(box);
+      imgEl = box.querySelector('.lb-img'); capEl = box.querySelector('.lb-cap'); dotsEl = box.querySelector('.lb-dots');
+      btnClose = box.querySelector('.lb-close'); btnPrev = box.querySelector('.lb-prev'); btnNext = box.querySelector('.lb-next');
+      links.forEach(function (_, i) {
+        var d = document.createElement('button');
+        d.type = 'button'; d.className = 'lb-dot'; d.setAttribute('aria-label', String(i + 1));
+        d.addEventListener('click', function (e) { e.stopPropagation(); show(i); });
+        dotsEl.appendChild(d);
+      });
+      btnClose.addEventListener('click', close);
+      btnPrev.addEventListener('click', function (e) { e.stopPropagation(); show(idx - 1); });
+      btnNext.addEventListener('click', function (e) { e.stopPropagation(); show(idx + 1); });
+      box.addEventListener('click', function (e) { if (e.target === box) close(); });
+      box.addEventListener('touchstart', function (e) { startX = e.changedTouches[0].clientX; }, { passive: true });
+      box.addEventListener('touchend', function (e) {
+        if (startX === null) return;
+        var dx = e.changedTouches[0].clientX - startX; startX = null;
+        if (Math.abs(dx) > 50) show(idx + (dx < 0 ? 1 : -1));
+      }, { passive: true });
+    };
+
+    var show = function (i) {
+      idx = (i + links.length) % links.length;
+      var a = links[idx], im = a.querySelector('img'), fc = a.parentElement.querySelector('figcaption');
+      imgEl.src = a.getAttribute('href'); imgEl.alt = im ? im.alt : '';
+      capEl.textContent = (fc ? fc.textContent : '') + '  ·  ' + (idx + 1) + '/' + links.length;
+      Array.prototype.forEach.call(dotsEl.children, function (d, j) { d.classList.toggle('on', j === idx); });
+      [1, -1].forEach(function (k) { var p = new Image(); p.src = links[(idx + k + links.length) % links.length].getAttribute('href'); });
+    };
+
+    var onKey = function (e) {
+      if (e.key === 'Escape') { close(); }
+      else if (e.key === 'ArrowRight') { show(idx + 1); }
+      else if (e.key === 'ArrowLeft') { show(idx - 1); }
+      else if (e.key === 'Tab') {
+        var f = [btnClose, btnPrev, btnNext], i = f.indexOf(document.activeElement);
+        e.preventDefault(); f[(i + (e.shiftKey ? -1 : 1) + f.length) % f.length].focus();
+      }
+    };
+
+    var open = function (i) {
+      if (!box) build();
+      var t = T();
+      box.setAttribute('aria-label', t.dlg); btnClose.setAttribute('aria-label', t.close);
+      btnPrev.setAttribute('aria-label', t.prev); btnNext.setAttribute('aria-label', t.next);
+      lastFocus = document.activeElement;
+      show(i);
+      box.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      document.addEventListener('keydown', onKey);
+      btnClose.focus();
+    };
+
+    var close = function () {
+      if (!box) return;
+      box.classList.remove('open');
+      document.body.style.overflow = '';
+      document.removeEventListener('keydown', onKey);
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    };
+
+    links.forEach(function (a, i) {
+      a.addEventListener('click', function (e) { e.preventDefault(); open(i); });
+    });
+  }
+
+  /* Bouton WhatsApp flottant : masqué quand la section Contact est visible */
+  var wa = document.getElementById('waFloat'), contact = document.getElementById('contact');
+  if (wa && contact && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { wa.classList.toggle('is-hidden', en.isIntersecting); });
+    }, { threshold: 0.15 }).observe(contact);
+  }
+})();

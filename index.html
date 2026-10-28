@@ -121,7 +121,7 @@
         <p id="t-about-p3">Mon moteur, c'est une conviction simple : <strong>l'innovation est une nécessité pour l'Afrique</strong>, pas un luxe importé. Je construis avec cette idée en tête, et je cherche aujourd'hui un environnement qui me permettra de la mettre au service d'un projet plus grand que moi.</p>
       </div>
       <div class="stat-grid">
-        <div class="stat"><ul class="stat-list"><li><span class="stat-key" id="t-stat1-done">Terminés</span><span class="stat-names">MESSIA · MADigital</span></li><li><span class="stat-key" id="t-stat1-wip">En cours</span><span class="stat-names">SmartSchool Africa</span></li><li><span class="stat-key" id="t-stat1-soon">À venir</span><span class="stat-names">Factura</span></li></ul></div>
+        <div class="stat"><ul class="stat-list"><li><span class="stat-key st-done" id="t-stat1-done">Terminés</span><span class="stat-names">MESSIA · MADigital</span></li><li><span class="stat-key st-wip" id="t-stat1-wip">En cours</span><span class="stat-names">SmartSchool Africa</span></li><li><span class="stat-key st-soon" id="t-stat1-soon">À venir</span><span class="stat-names">Factura</span></li></ul></div>
         <div class="stat"><div class="stat-val">Full-stack</div><div class="stat-lbl" id="t-stat2-lbl">Du backend à l'interface utilisateur</div></div>
       </div>
     </div>
@@ -227,7 +227,7 @@
     <div class="log">
       <div class="log-entry live">
         <div class="log-dot"></div>
-        <div class="log-meta"><span class="log-hash">#messia</span><span>·</span><span>2026</span><span>·</span><span id="t-p1-status">terminé · en ligne</span></div>
+        <div class="log-meta"><span class="log-hash">#messia</span><span>·</span><span>2026</span><span>·</span><span class="status-chip st-done" id="t-p1-status">terminé · en ligne</span></div>
         <div class="log-card">
           <span class="role" id="t-p1-role">Assistant IA conversationnel</span>
           <h3>MESSIA</h3>
@@ -246,7 +246,7 @@
 
       <div class="log-entry live">
         <div class="log-dot"></div>
-        <div class="log-meta"><span class="log-hash">#smartschool</span><span>·</span><span>2026</span><span>·</span><span id="t-p2-status">en cours — non public</span></div>
+        <div class="log-meta"><span class="log-hash">#smartschool</span><span>·</span><span>2026</span><span>·</span><span class="status-chip st-wip" id="t-p2-status">en cours — non public</span></div>
         <div class="log-card">
           <span class="role" id="t-p2-role">SaaS multi-tenant</span>
           <h3>SmartSchool Africa</h3>
@@ -262,7 +262,7 @@
 
       <div class="log-entry soon">
         <div class="log-dot"></div>
-        <div class="log-meta"><span class="log-hash">#factura</span><span>·</span><span>2026</span><span>·</span><span id="t-p3-status">à venir</span></div>
+        <div class="log-meta"><span class="log-hash">#factura</span><span>·</span><span>2026</span><span>·</span><span class="status-chip st-soon" id="t-p3-status">à venir</span></div>
         <div class="log-card">
           <span class="role" id="t-p3-role">SaaS fintech</span>
           <h3>Factura</h3>
@@ -275,7 +275,7 @@
 
       <div class="log-entry live">
         <div class="log-dot"></div>
-        <div class="log-meta"><span class="log-hash">#sites-vitrines</span><span>·</span><span>2026</span><span>·</span><span id="t-p4-status">terminé · exemple en ligne</span></div>
+        <div class="log-meta"><span class="log-hash">#sites-vitrines</span><span>·</span><span>2026</span><span>·</span><span class="status-chip st-done" id="t-p4-status">terminé · exemple en ligne</span></div>
         <div class="log-card">
           <span class="role" id="t-p4-role">Sites web pour commerces locaux</span>
           <h3 id="t-p4-title">MADigital — pages de commande WhatsApp</h3>
@@ -300,7 +300,8 @@
     <div class="section-head" style="margin-top:-10px;"><h2 class="section-title" id="t-svc-title">Ce que je <em>propose</em></h2></div>
     <p class="svc-intro" id="t-svc-intro">Mon offre MADigital : une page de commande pour les commerces qui vendent déjà par WhatsApp.</p>
     <div class="opp-grid opp-grid-3">
-      <div class="opp-card">
+      <div class="opp-card opp-feat">
+        <span class="opp-badge" id="t-svc1-badge">Recommandé</span>
         <h3 id="t-svc1-h">Standard</h3>
         <p class="svc-price" id="t-svc1-price">90 000 FCFA</p>
         <ul class="svc-list"><li id="t-svc1-l1">Page mobile, jusqu'à 20 produits</li><li id="t-svc1-l2">Bouton Commander sur WhatsApp</li><li id="t-svc1-l3">WhatsApp Business configuré</li><li id="t-svc1-l4">QR code et visuel de partage</li><li id="t-svc1-l5">Une série de corrections</li></ul>
@@ -432,6 +433,7 @@
 
 <footer id="t-footer">© 2026 Messi Amour · Brazzaville, République du Congo</footer>
 
+<a class="wa-float" id="waFloat" href="https://wa.me/242065487336?text=Bonjour%20Messi%2C%20j%27ai%20vu%20votre%20portfolio%20et%20j%27aimerais%20discuter%20d%27un%20projet." target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg><span>WhatsApp</span></a>
 <script src="script.js"></script>
 </body>
 </html>
