@@ -226,6 +226,13 @@ document.addEventListener('DOMContentLoaded', () => {
       "t-svc3-l1": "Hosting of your page",
       "t-svc3-l2": "Up to 5 changes per month",
       "t-svc3-l3": "Support via WhatsApp",
+      "t-p2-shotsnote": "Demo-mode screenshots: all the data shown (schools, users, revenue, students) is fictional.",
+      "t-p2-s1": "Login \u2014 demo mode",
+      "t-p2-s2": "Super Admin \u2014 platform overview",
+      "t-p2-s3": "School head \u2014 overview",
+      "t-p2-s4": "Teacher \u2014 overview",
+      "t-p2-s5": "Student \u2014 grades and progress",
+      "t-p2-s6": "Parent \u2014 children overview",
       "t-nav-services": "Services",
       "t-svc-eyebrow": "Services",
       "t-svc-title": "What I <em>offer</em>",
@@ -349,6 +356,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (themeBtn) {
     themeBtn.addEventListener('click', () => {
       const next = currentTheme() === 'dark' ? 'light' : 'dark';
+      if (!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+        htmlEl.classList.add('theme-anim');
+        setTimeout(function () { htmlEl.classList.remove('theme-anim'); }, 450);
+      }
       htmlEl.setAttribute('data-theme', next);
       try { localStorage.setItem('site-theme', next); } catch (e) {}
       updateThemeLabel();
@@ -434,6 +445,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     };
 
+    contactForm.addEventListener('input', function (e) {
+
+      if (e.target && e.target.classList) { e.target.classList.remove('invalid'); e.target.removeAttribute('aria-invalid'); }
+
+    });
+
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const t = statusText[currentLang] || statusText.fr;
@@ -443,6 +460,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const message = String(data.get('message') || '').trim();
 
       if (!name || !message || !/^\S+@\S+\.\S+$/.test(email)) {
+
+        const bad = [['cf-name', !name], ['cf-email', !/^\S+@\S+\.\S+$/.test(email)], ['cf-message', !message]];
+
+        bad.forEach(function (p) { var el = document.getElementById(p[0]); if (el) { el.classList.toggle('invalid', p[1]); el.setAttribute('aria-invalid', p[1] ? 'true' : 'false'); } });
+
+        var firstBad = bad.filter(function (p) { return p[1]; })[0];
+
+        if (firstBad) { var fb = document.getElementById(firstBad[0]); if (fb) fb.focus(); }
         formStatus.textContent = t.missing;
         formStatus.className = 'form-status error';
         return;
@@ -490,7 +515,8 @@ document.addEventListener('DOMContentLoaded', () => {
     ? { close: 'Close', prev: 'Previous image', next: 'Next image', dlg: 'Image viewer' }
     : { close: 'Fermer', prev: 'Image précédente', next: 'Image suivante', dlg: "Visionneuse d'images" }; };
 
-  var links = Array.prototype.slice.call(document.querySelectorAll('.shots a'));
+  document.querySelectorAll('.shots').forEach(function (group) {
+  var links = Array.prototype.slice.call(group.querySelectorAll('a'));
   if (links.length) {
     var idx = 0, box, imgEl, capEl, dotsEl, btnClose, btnPrev, btnNext, lastFocus = null, startX = null;
 
@@ -569,6 +595,7 @@ document.addEventListener('DOMContentLoaded', () => {
       a.addEventListener('click', function (e) { e.preventDefault(); open(i); });
     });
   }
+  });
 
   /* Bouton WhatsApp flottant : masqué quand la section Contact est visible */
   var wa = document.getElementById('waFloat'), contact = document.getElementById('contact');

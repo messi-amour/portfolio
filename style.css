@@ -7,13 +7,13 @@
   --line-strong:rgba(255,255,255,0.18);
   --cream:#f2ede2;
   --dim:#9c9488;
-  --faint:#5c574f;
+  --faint:#8c8983;
 
   --gold:#dcac52;
   --gold-soft:rgba(220,172,82,0.14);
   --cobalt:#3f5da8;
   --cobalt-soft:rgba(63,93,168,0.16);
-  --paprika:#c96a2e;
+  --paprika:#cb7137;
   --paprika-soft:rgba(201,106,46,0.15);
   --emerald:#4caf74;
 
@@ -28,10 +28,10 @@
 :root[data-theme="light"]{
   --ink:#faf7f0; --ink-raised:#f1ebdd; --card:#ffffff; --card-2:#f7f2e8;
   --line:rgba(16,14,19,0.10); --line-strong:rgba(16,14,19,0.24);
-  --cream:#1b1820; --dim:#5a5348; --faint:#7d766a;
+  --cream:#1b1820; --dim:#5a5348; --faint:#6f685e;
   --gold:#8c6210; --gold-soft:rgba(140,98,16,0.12);
   --cobalt:#2f4a8f; --cobalt-soft:rgba(47,74,143,0.10);
-  --paprika:#b04e17; --paprika-soft:rgba(176,78,23,0.10);
+  --paprika:#ac4c17; --paprika-soft:rgba(176,78,23,0.10);
   --emerald:#25764a;
   --on-gold:#ffffff; --gold-hover:#a8741a; --nav-bg:rgba(250,247,240,0.88);
   color-scheme:light;
@@ -511,3 +511,29 @@ html{ scroll-padding-top:74px; }
 @media (max-width:620px){ .lb-prev, .lb-next{ position:absolute; bottom:18px; } .lb-prev{ left:16px; } .lb-next{ right:16px; } .lb-dots{ margin-bottom:56px; } }
 @keyframes lbIn{ from{ opacity:0; } to{ opacity:1; } }
 @media (prefers-reduced-motion:reduce){ .st-wip::before, .lightbox.open{ animation:none; } .wa-float{ transition:none; } }
+
+/* Transition douce clair / sombre */
+html.theme-anim, html.theme-anim *, html.theme-anim *::before, html.theme-anim *::after{ transition:background-color .35s ease, color .35s ease, border-color .35s ease, box-shadow .35s ease !important; }
+
+/* Méthode : une ligne dorée se trace d'étape en étape */
+.process-step::before{ content:''; position:absolute; top:0; left:0; right:0; height:2px; background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform .7s cubic-bezier(.3,.7,.2,1); }
+.reveal.in .process-step::before{ transform:scaleX(1); }
+.process-step:nth-child(2)::before{ transition-delay:.25s; }
+.process-step:nth-child(3)::before{ transition-delay:.5s; }
+.process-step:nth-child(4)::before{ transition-delay:.75s; }
+
+/* Formulaire : retours plus doux */
+.contact-form input, .contact-form textarea{ transition:border-color .25s ease, box-shadow .25s ease; }
+.contact-form .invalid{ border-color:var(--paprika) !important; box-shadow:0 0 0 3px rgba(201,106,46,.18); }
+.form-status.success, .form-status.error{ animation:statusIn .35s ease both; }
+.form-status.success::before{ content:''; display:inline-block; width:6px; height:12px; margin:0 12px 2px 4px; border:solid currentColor; border-width:0 2.5px 2.5px 0; transform:rotate(45deg) scale(0); animation:checkIn .4s .15s cubic-bezier(.3,1.5,.5,1) forwards; }
+@keyframes statusIn{ from{ opacity:0; transform:translateY(-4px); } to{ opacity:1; transform:none; } }
+@keyframes checkIn{ to{ transform:rotate(45deg) scale(1); } }
+@media (prefers-reduced-motion:reduce){
+  .process-step::before{ transform:scaleX(1); transition:none; }
+  .form-status.success, .form-status.error{ animation:none; }
+  .form-status.success::before{ animation:none; transform:rotate(45deg) scale(1); }
+}
+
+/* Galerie SmartSchool : note sur les données fictives */
+.shots-note{ font-family:var(--mono); font-size:12px; line-height:1.5; color:var(--dim); margin:4px 0 6px; max-width:62ch; }
