@@ -537,3 +537,7 @@ html.theme-anim, html.theme-anim *, html.theme-anim *::before, html.theme-anim *
 
 /* Galerie SmartSchool : note sur les données fictives */
 .shots-note{ font-family:var(--mono); font-size:12px; line-height:1.5; color:var(--dim); margin:4px 0 6px; max-width:62ch; }
+
+/* Services : offre de lancement */
+.svc-launch{ margin-top:10px; }
+.svc-launch strong{ color:var(--gold); font-weight:600; }
